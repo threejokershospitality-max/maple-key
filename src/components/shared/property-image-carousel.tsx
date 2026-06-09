@@ -36,6 +36,8 @@ export function PropertyImageCarousel({
         alt={`${alt} - photo ${index + 1}`}
         fill
         priority={priority && index === 0}
+        loading={priority && index === 0 ? undefined : "lazy"}
+        quality={75}
         className="object-cover transition-transform duration-700 group-hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />

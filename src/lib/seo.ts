@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { siteConfig } from "./config";
+import { amenities } from "@/data/homepage";
 import { Property, FAQ, Destination } from "@/types";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mapleandkey.com";
@@ -128,19 +129,16 @@ export function propertySchema(property: Property) {
       "@type": "QuantitativeValue",
       value: property.guests,
     },
-    amenityFeature: property.amenities.map((amenity) => ({
+    amenityFeature: amenities.map((amenity) => ({
       "@type": "LocationFeatureSpecification",
-      name: amenity,
+      name: amenity.name,
       value: true,
     })),
-    aggregateRating: property.reviews.length
+    aggregateRating: property.reviewCount
       ? {
           "@type": "AggregateRating",
-          ratingValue: (
-            property.reviews.reduce((sum, r) => sum + r.rating, 0) /
-            property.reviews.length
-          ).toFixed(1),
-          reviewCount: property.reviews.length.toString(),
+          ratingValue: property.averageRating.toString(),
+          reviewCount: property.reviewCount.toString(),
           bestRating: "5",
         }
       : undefined,

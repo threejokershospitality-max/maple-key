@@ -31,26 +31,16 @@ export const siteConfig: SiteConfig = {
     cities: 1,
     yearsHosting: 2,
     averageRating: 4.8,
-    totalReviews: 250,
+    totalReviews: 253,
   },
 };
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/properties", label: "Properties" },
-  { href: "/experiences", label: "Experiences" },
   { href: "/destinations", label: "Destinations" },
+  { href: "/experiences", label: "Experiences" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
-
-export const amenityIcons: Record<string, string> = {
-  wifi: "Wifi",
-  parking: "Car",
-  tv: "Tv",
-  ac: "Wind",
-  kitchen: "ChefHat",
-  backup: "Zap",
-  workspace: "Laptop",
-  security: "Shield",
-};

@@ -51,21 +51,21 @@ export const stayCategories: StayCategory[] = [
     id: "1",
     title: "Family Vacations",
     description: "Spacious homes designed for memorable family holidays.",
-    image: images.categories.family,
+    image: images.categories.familyVacation,
     slug: "family-vacation",
   },
   {
     id: "2",
-    title: "Heritage Stays",
-    description: "Restored havelis and courtyard homes in old Varanasi.",
-    image: images.categories.heritage,
+    title: "Luxury Villas",
+    description: "Premium villas with pools, terraces, and refined interiors.",
+    image: images.categories.luxuryVilla,
     slug: "luxury-villa",
   },
   {
     id: "3",
     title: "Group Retreats",
     description: "Spacious villas for family pilgrimages and gatherings.",
-    image: images.categories.group,
+    image: images.categories.groupRetreat,
     slug: "group-retreat",
   },
   {
@@ -77,17 +77,17 @@ export const stayCategories: StayCategory[] = [
   },
   {
     id: "5",
-    title: "Long Stays",
-    description: "Extended stays with all the comforts of home in Kashi.",
-    image: images.categories.longStay,
-    slug: "long-stay",
+    title: "Weekend Escapes",
+    description: "Short spiritual getaways in the eternal city.",
+    image: images.categories.weekendEscape,
+    slug: "weekend-escape",
   },
   {
     id: "6",
-    title: "Weekend Escapes",
-    description: "Short spiritual getaways in the eternal city.",
-    image: images.categories.weekend,
-    slug: "weekend-escape",
+    title: "Heritage Stay",
+    description: "Restored havelis and courtyard homes in old Varanasi.",
+    image: images.categories.heritageStay,
+    slug: "heritage-stay",
   },
 ];
 
@@ -140,6 +140,12 @@ export const amenities: Amenity[] = [
     icon: "Shield",
     description: "24/7 security and CCTV at all properties.",
   },
+];
+
+export const propertyHouseRules = [
+  "Residential area. Please avoid loud music or disturbances outside the property.",
+  "No smoking indoors. Permitted on the terrace and garden only.",
+  "Valid government-issued photo ID required at check-in.",
 ];
 
 export const localExperiences = [
@@ -204,30 +210,35 @@ export const brandValues: BrandValue[] = [
 
 export const milestones: Milestone[] = [
   {
+    id: "m1",
     year: "2025",
     title: "The Beginning",
     description:
       "Three Jokers Hospitality launches with a vision to redefine homestay experiences in India.",
   },
   {
+    id: "m2",
     year: "2025",
     title: "Rooted in Kashi",
     description:
       "Portfolio grows across Varanasi, serving 500+ happy guests.",
   },
   {
+    id: "m3",
     year: "2026",
     title: "Maple & Key Born",
     description:
       "Premium brand Maple & Key is introduced, curating handpicked luxury stays in Varanasi.",
   },
   {
+    id: "m4",
     year: "2026",
     title: "Recognition",
     description:
       "Achieved 98% guest satisfaction rate with 40% repeat guest bookings.",
   },
   {
+    id: "m5",
     year: "2027",
     title: "Looking Ahead",
     description:

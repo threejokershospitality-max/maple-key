@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { PropertyImageCarousel } from "@/components/shared/property-image-carousel";
 import { motion } from "framer-motion";
-import { MapPin, Users, BedDouble, Bath } from "lucide-react";
+import { MapPin, Users, BedDouble, Bath, Star } from "lucide-react";
 import { Property } from "@/types";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { categoryLabels } from "@/data/faqs";
+import { AirbnbLink } from "@/components/shared/airbnb-link";
 
 interface PropertyCardProps {
   property: Property;
@@ -21,19 +20,14 @@ export function PropertyCard({ property, index = 0 }: PropertyCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-ivory rounded-sm overflow-hidden shadow-luxury hover:shadow-luxury-lg transition-all duration-500"
+      className="group surface-card-interactive overflow-hidden"
     >
       <Link href={`/properties/${property.slug}`} className="block relative">
         <PropertyImageCarousel
           images={property.gallery}
           alt={property.name}
-          priority={index < 3}
+          priority={index === 0}
         />
-        <div className="absolute top-4 left-4 z-10">
-          <Badge variant="secondary">
-            {categoryLabels[property.category]}
-          </Badge>
-        </div>
       </Link>
 
       <div className="p-6">
@@ -54,24 +48,39 @@ export function PropertyCard({ property, index = 0 }: PropertyCardProps) {
           {property.shortDescription}
         </p>
 
-        <div className="flex items-center gap-4 text-sm text-charcoal/60 mb-5">
-          <span className="flex items-center gap-1">
-            <Users className="h-4 w-4" />
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-charcoal/60 mb-5">
+          <span className="flex shrink-0 items-center gap-1">
+            <Users className="h-4 w-4 shrink-0" />
             {property.guests} Guests
           </span>
-          <span className="flex items-center gap-1">
-            <BedDouble className="h-4 w-4" />
-            {property.bedrooms} Beds
+          <span className="flex min-w-0 items-center gap-1">
+            <BedDouble className="h-4 w-4 shrink-0" />
+            <span className="truncate">
+              {property.bedrooms} Beds
+              {property.extraBeds && ` · ${property.extraBeds}`}
+            </span>
           </span>
-          <span className="flex items-center gap-1">
-            <Bath className="h-4 w-4" />
+          <span className="flex shrink-0 items-center gap-1">
+            <Bath className="h-4 w-4 shrink-0" />
             {property.bathrooms} Baths
+          </span>
+          <span className="flex shrink-0 items-center gap-1">
+            <Star className="h-4 w-4 shrink-0 fill-gold text-gold" />
+            {property.averageRating.toFixed(
+              Number.isInteger(property.averageRating) ? 0 : 2
+            )}{" "}
+            ({property.reviewCount})
           </span>
         </div>
 
-        <Button asChild variant="outline" className="w-full">
-          <Link href={`/properties/${property.slug}`}>View Property</Link>
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button asChild variant="outline" className="flex-1">
+            <Link href={`/properties/${property.slug}`}>View Property</Link>
+          </Button>
+          {property.airbnbUrl && (
+            <AirbnbLink url={property.airbnbUrl} className="shrink-0" />
+          )}
+        </div>
       </div>
     </motion.article>
   );

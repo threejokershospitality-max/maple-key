@@ -1,4 +1,4 @@
-import { Property } from "@/types";
+import { Property, PROPERTY_CATEGORIES } from "@/types";
 import { images } from "@/lib/images";
 
 const wm = images.properties.wayneManor;
@@ -13,6 +13,7 @@ export const properties: Property[] = [
   {
     id: "1",
     slug: "the-wayne-manor",
+    airbnbUrl: "https://www.airbnb.co.in/h/thewaynemanor",
     name: "The Wayne Manor",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -21,7 +22,7 @@ export const properties: Property[] = [
       "A private ultra-luxury 6BHK villa in the serene surroundings of Varanasi, designed for indulgent stays and unforgettable gatherings. The villa features elegant interiors, spacious living areas, and modern amenities for complete comfort. Step outside to your own expansive lawn and private garden perfect for morning tea, evening bonfires, celebrations, or relaxed weekend escapes. Ideal for families, groups, and travellers seeking privacy, luxury, and a peaceful retreat near the city.",
     shortDescription:
       "A private ultra-luxury 6BHK villa in the serene surroundings of Varanasi, designed for indulgent stays and unforgettable gatherings. The villa features elegant...",
-    category: "pilgrimage",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: wm.featured,
     gallery: [
         "/images/properties/the-wayne-manor/1.png",
@@ -30,21 +31,10 @@ export const properties: Property[] = [
         "/images/properties/the-wayne-manor/4.jpg",
         "/images/properties/the-wayne-manor/5.jpg",
       ],
-    guests: 12,
+    guests: 16,
     bedrooms: 6,
     bathrooms: 5,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Parking",
-      "Power Backup",
-      "Rooftop Terrace",
-      "Security",
-      "Housekeeping",
-      "Ganga View",
-    ],
+    extraBeds: "4 extra mattress",
     highlights: [
       "Ganga View",
       "Near Temple",
@@ -53,66 +43,61 @@ export const properties: Property[] = [
       "Family Friendly",
     ],
     coordinates: { lat: 25.3109, lng: 83.0107 },
+    mapUrl: "https://maps.app.goo.gl/f3uZ2WKb1qCEuoTa9?g_st=ic",
+    mapPlace:
+      "The Wayne Manor - 6BHK Luxury Villa and Lawn, Krishna Nagar Colony, Airport Road, next to Raj TVS, Suddhipur, Shivpur, Varanasi, Uttar Pradesh 221002",
     destinationSlug: "varanasi",
     featured: true,
     checkIn: "1:00 PM",
     checkOut: "10:00 AM",
-    bedroomDetails: [
-      {
-        name: "Ganga Suite",
-        bedType: "King Bed",
-        features: ["River View", "Ensuite Bathroom", "Private Balcony"],
-      },
-      {
-        name: "Kashi Chamber",
-        bedType: "Queen Bed",
-        features: ["Courtyard View", "Ensuite Bathroom"],
-      },
-      {
-        name: "Ghat View Room",
-        bedType: "Twin Beds",
-        features: ["Partial River View", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Kashi Vishwanath Temple",
-        description: "The holiest Shiva temple, a short walk from the property.",
-        distance: "800 m",
-        travelTime: "10 min walk",
-        image: wm.attractions.temple,
-      },
-      {
-        name: "Dashashwamedh Ghat",
-        description: "Famous ghat for the spectacular evening Ganga aarti.",
-        distance: "1 km",
-        travelTime: "12 min walk",
-        image: wm.attractions.ghat,
-      },
-      {
-        name: "Manikarnika Ghat",
-        description: "One of the oldest and most sacred cremation ghats of Kashi.",
-        distance: "1.5 km",
-        travelTime: "15 min walk",
-        image: wm.attractions.manikarnika,
-      },
-    ],
-    houseRules: [
-      "Vegetarian meals only on premises",
-      "Respectful attire recommended near ghats and temples",
-      "Quiet hours: 10 PM – 6 AM",
-      "No alcohol on property",
-      "Check-in ID proof required for all guests",
-    ],
+    averageRating: 5,
+    reviewCount: 7,
     reviews: [
       {
-        id: "r1",
-        guestName: "Meera Krishnan",
-        guestImage: images.guests.guest3,
+        id: "r1a",
+        guestName: "Joseph",
         rating: 5,
         review:
-          "Waking up to the Ganges from our balcony was divine. Perfect base for our Kashi pilgrimage, the team arranged everything from temple darshan to boat rides.",
-        date: "2025-11-10",
+          "Great host. Enjoyed my stay, would prefer again and would suggest to everyone.",
+        date: "2026-06-04",
+      },
+      {
+        id: "r1b",
+        guestName: "Priyanka",
+        rating: 5,
+        review:
+          "Nice place. Caretaker is very supportive. Rooms are clean and spacious.",
+        date: "2026-06-02",
+      },
+      {
+        id: "r1c",
+        guestName: "Vikas",
+        rating: 5,
+        review:
+          "Had an absolutely fabulous experience! The house is beautiful, well-maintained, and equipped with excellent amenities that made our stay extremely comfortable.",
+        date: "2026-05-15",
+      },
+      {
+        id: "r1d",
+        guestName: "Soni",
+        rating: 5,
+        review: "Good property, well approached, good services.",
+        date: "2026-05-01",
+      },
+      {
+        id: "r1e",
+        guestName: "Ankur",
+        rating: 5,
+        review:
+          "Stayed with family. Akash Pandey helped us a lot to explore some local food too. He is a nice guy.",
+        date: "2026-04-15",
+      },
+      {
+        id: "r1f",
+        guestName: "Yash",
+        rating: 5,
+        review: "Comfortable and convenient, overall a good choice.",
+        date: "2026-04-01",
       },
     ],
     faq: [
@@ -130,6 +115,7 @@ export const properties: Property[] = [
   {
     id: "2",
     slug: "the-golden-dior",
+    airbnbUrl: "https://www.airbnb.co.in/h/thegoldendior",
     name: "The Golden Dior",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -138,23 +124,13 @@ export const properties: Property[] = [
       "Tucked within the ancient lanes of the old city, The Golden Dior is a tranquil homestay where traditional Banarasi architecture meets thoughtful hospitality. A central courtyard, hand-painted frescoes, and proximity to the ghats make it ideal for spiritual seekers and cultural explorers.",
     shortDescription:
       "Intimate courtyard homestay in the heart of old Varanasi, minutes from the ghats.",
-    category: "pilgrimage",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: gd.featured,
     gallery: [...gd.gallery],
-    guests: 6,
-    bedrooms: 2,
+    guests: 25,
+    bedrooms: 7,
     bathrooms: 2,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Power Backup",
-      "Courtyard",
-      "Security",
-      "Housekeeping",
-      "Yoga Mats",
-    ],
+    extraBeds: "11 extra mattress",
     highlights: [
       "Heritage Property",
       "Near Temple",
@@ -164,52 +140,11 @@ export const properties: Property[] = [
     coordinates: { lat: 25.3176, lng: 83.0059 },
     destinationSlug: "varanasi",
     featured: true,
-    checkIn: "12:00 PM",
+    checkIn: "1:00 PM",
     checkOut: "10:00 AM",
-    bedroomDetails: [
-      {
-        name: "Courtyard Suite",
-        bedType: "King Bed",
-        features: ["Courtyard Access", "Ensuite Bathroom"],
-      },
-      {
-        name: "Lane Room",
-        bedType: "Queen Bed",
-        features: ["Old City View", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Vishwanath Gali",
-        description: "Historic lane leading to Kashi Vishwanath Temple.",
-        distance: "500 m",
-        travelTime: "8 min walk",
-        image: gd.attractions.gali,
-      },
-      {
-        name: "Assi Ghat",
-        description: "Southern ghat popular for morning yoga and evening gatherings.",
-        distance: "3 km",
-        travelTime: "12 min",
-        image: gd.attractions.assi,
-      },
-    ],
-    houseRules: [
-      "Remove footwear in courtyard and prayer areas",
-      "Silence during morning meditation hours (6–8 AM)",
-      "No smoking inside",
-      "Respect neighbours in the old city lanes",
-    ],
-    reviews: [
-      {
-        id: "r2",
-        guestName: "Rajesh & Anjali Verma",
-        rating: 5,
-        review:
-          "The courtyard homestay felt like staying with family in Kashi. Authentic, peaceful, and perfectly located for temple visits.",
-        date: "2025-10-05",
-      },
-    ],
+    averageRating: 5,
+    reviewCount: 5,
+    reviews: [],
     faq: [
       {
         question: "Is parking available?",
@@ -221,6 +156,7 @@ export const properties: Property[] = [
   {
     id: "3",
     slug: "the-haven-retreat",
+    airbnbUrl: "https://www.airbnb.co.in/h/thehavenretreatvns",
     name: "The Haven Retreat",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -229,7 +165,7 @@ export const properties: Property[] = [
       "Luxurious 3BHK Villa | Private Retreat Welcome to The Haven Retreat, a stunning 3BHK luxury villa designed for a perfect getaway. Nestled in a peaceful location, this stylish retreat offers a blend of modern elegance and ultimate comfort, making it ideal for families, friends, or business travellers",
     shortDescription:
       "Luxurious 3BHK Villa | Private Retreat  Welcome to The Haven Retreat, a stunning 3BHK luxury villa designed for a perfect getaway. Nestled in a peaceful...",
-    category: "family-vacation",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: hr.featured,
     gallery: [
         "/images/properties/the-haven-retreat/1.png",
@@ -238,21 +174,10 @@ export const properties: Property[] = [
         "/images/properties/the-haven-retreat/4.jpg",
         "/images/properties/the-haven-retreat/5.jpg",
       ],
-    guests: 6,
+    guests: 10,
     bedrooms: 3,
     bathrooms: 3,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Parking",
-      "Power Backup",
-      "Rooftop Terrace",
-      "Workspace",
-      "Security",
-      "Housekeeping",
-    ],
+    extraBeds: "4 extra mattress",
     highlights: [
       "Family Friendly",
       "Near Ghat",
@@ -261,63 +186,63 @@ export const properties: Property[] = [
       "Remote Work Friendly",
     ],
     coordinates: { lat: 25.2832, lng: 83.0062 },
+    mapUrl: "https://maps.app.goo.gl/x4y7QenMW6oQsaGr8?g_st=ic",
+    mapPlace:
+      "The Haven Retreat - Luxury Villa, A-6129, Vishwakarma Nagar, Mohanpuri Colony, Karaundi, Kandwa, Varanasi, Uttar Pradesh 221011",
     destinationSlug: "varanasi",
     featured: true,
-    checkIn: "2:00 PM",
-    checkOut: "11:00 AM",
-    bedroomDetails: [
-      {
-        name: "Terrace Suite",
-        bedType: "King Bed",
-        features: ["Rooftop Access", "Ensuite Bathroom"],
-      },
-      {
-        name: "Family Room",
-        bedType: "Queen Bed",
-        features: ["Garden View", "Ensuite Bathroom"],
-      },
-      {
-        name: "Twin Room",
-        bedType: "Twin Beds",
-        features: ["Street View", "Shared Bathroom"],
-      },
-      {
-        name: "Study Room",
-        bedType: "Queen Bed",
-        features: ["Workspace", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Assi Ghat",
-        description: "Popular ghat for morning rituals, yoga, and boat rides.",
-        distance: "400 m",
-        travelTime: "5 min walk",
-        image: hr.attractions.assi,
-      },
-      {
-        name: "Banaras Hindu University",
-        description: "Historic campus with museums, temples, and cultural events.",
-        distance: "2 km",
-        travelTime: "8 min",
-        image: hr.attractions.bhu,
-      },
-    ],
-    houseRules: [
-      "Children welcome, please supervise on rooftop",
-      "Quiet hours: 10 PM – 7 AM",
-      "Maximum occupancy as per booking",
-      "No parties without prior approval",
-    ],
+    checkIn: "1:00 PM",
+    checkOut: "10:00 AM",
+    averageRating: 4.83,
+    reviewCount: 88,
     reviews: [
       {
-        id: "r3",
-        guestName: "Priya Sharma",
-        guestImage: images.guests.guest1,
+        id: "r3a",
+        guestName: "Krishna",
         rating: 5,
         review:
-          "Perfect for our family trip to Varanasi. Spacious, clean, and the rooftop views at sunrise were unforgettable.",
-        date: "2025-09-20",
+          "This is a really nice BNB and the host and manager here are also very nice—they talk very lovingly. I enjoyed it here and would say the same to everyone; this property is absolutely 5 star.",
+        date: "2026-05-26",
+      },
+      {
+        id: "r3b",
+        guestName: "Sapna",
+        rating: 5,
+        review:
+          "It was a nice, clean, and well-maintained property. Communication throughout was very clear, and all instructions were shared in advance. The location was accurate and easy to find. We also had someone available from time to time who promptly helped resolve any issues. Overall, we had a very comfortable stay and did not face any problems. Would definitely recommend it for families.",
+        date: "2026-05-19",
+      },
+      {
+        id: "r3c",
+        guestName: "Akash",
+        rating: 5,
+        review:
+          "Great stay! The place was clean, comfortable, and exactly as described. The host was friendly and responsive, making everything smooth and easy. Would definitely recommend and stay again!",
+        date: "2026-04-15",
+      },
+      {
+        id: "r3d",
+        guestName: "Neha",
+        rating: 5,
+        review:
+          "I had a wonderful stay at this Airbnb! The place was exactly as described—clean, comfortable, and thoughtfully arranged. The ambiance was warm and welcoming, making it feel like a home away from home. The host was extremely responsive and helpful throughout our stay, ensuring we had everything we needed. The location was also very convenient, with easy access to nearby attractions and essentials. Overall, it was a smooth and enjoyable stay, and I would definitely recommend this place to anyone visiting.",
+        date: "2026-04-01",
+      },
+      {
+        id: "r3e",
+        guestName: "Shilpa",
+        rating: 5,
+        review:
+          "The place was exactly as described and worth the money. Great for short stays. Location is a bit far from temple and ghat areas and quite interior though. We had our private car so it was manageable. Overall a good stay.",
+        date: "2026-03-15",
+      },
+      {
+        id: "r3f",
+        guestName: "Manhar",
+        rating: 5,
+        review:
+          "The offered property was very comfortable and well maintained. Rooms were clean and ventilated. Washrooms were clean with running hot and cold water. Deepak and Nitin were always available and of great help. Kitchen accessories were good. There was no gas but induction was sufficient. It was on the second floor with no lift. There was ample parking and safe. Overall, worth staying again. Thanks to dear Shikher for being responsive every time.",
+        date: "2026-03-01",
       },
     ],
     faq: [
@@ -331,6 +256,7 @@ export const properties: Property[] = [
   {
     id: "4",
     slug: "the-gardenveil-cottage",
+    airbnbUrl: "https://www.airbnb.co.in/h/thegardenveil",
     name: "The Gardenveil Cottage",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -339,7 +265,7 @@ export const properties: Property[] = [
       "Welcome to The Gardenveil Suite, a luxury cottage and serene garden hideaway tucked behind lush blooms and whispering flowers. This private retreat offers modern luxury with earthy charm, featuring a plush king bed, elegant bath, a fully equipped kitchen, and your own tranquil outdoor space. Perfect for quiet escapes, romantic getaways, or peaceful inspiration in nature's embrace.",
     shortDescription:
       "A serene garden hideaway with modern luxury, earthy charm, and your own tranquil outdoor space in Varanasi.",
-    category: "group-retreat",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: gc.featured,
     gallery: [
         "/images/properties/the-gardenveil-cottage/1.jpg",
@@ -351,18 +277,7 @@ export const properties: Property[] = [
     guests: 4,
     bedrooms: 1,
     bathrooms: 1,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Parking",
-      "Power Backup",
-      "Private Garden",
-      "Security",
-      "Housekeeping",
-      "Outdoor Dining",
-    ],
+    extraBeds: "1 sofa cum bed",
     highlights: [
       "Group Friendly",
       "Family Friendly",
@@ -371,67 +286,63 @@ export const properties: Property[] = [
       "Pilgrimage Ready",
     ],
     coordinates: { lat: 25.3269, lng: 82.9873 },
+    mapUrl: "https://maps.app.goo.gl/VmXFTNhQUsMYagGs7?g_st=ic",
+    mapPlace:
+      "Aikyam, SH-16/740, Yadav Nagar, Indrapur, Varanasi, Uttar Pradesh 221003",
     destinationSlug: "varanasi",
     featured: true,
-    checkIn: "2:00 PM",
-    checkOut: "11:00 AM",
-    bedroomDetails: [
-      {
-        name: "Master Suite",
-        bedType: "King Bed",
-        features: ["Garden View", "Ensuite Bathroom"],
-      },
-      {
-        name: "Pilgrim Room",
-        bedType: "Queen Bed",
-        features: ["Ensuite Bathroom"],
-      },
-      {
-        name: "Family Room",
-        bedType: "Queen Bed",
-        features: ["Ensuite Bathroom"],
-      },
-      {
-        name: "Guest Room A",
-        bedType: "Twin Beds",
-        features: ["Shared Bathroom"],
-      },
-      {
-        name: "Guest Room B",
-        bedType: "Twin Beds",
-        features: ["Shared Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Sankat Mochan Temple",
-        description: "Beloved Hanuman temple, especially vibrant on Tuesdays.",
-        distance: "4 km",
-        travelTime: "15 min",
-        image: gc.attractions.sankatMochan,
-      },
-      {
-        name: "Sarnath",
-        description: "Buddhist pilgrimage site where Buddha first taught.",
-        distance: "12 km",
-        travelTime: "30 min",
-        image: gc.attractions.sarnath,
-      },
-    ],
-    houseRules: [
-      "Maximum 14 guests including children",
-      "Vegetarian kitchen preferred for pilgrimage groups",
-      "Event gatherings require prior approval",
-      "Quiet hours: 10 PM – 7 AM",
-    ],
+    checkIn: "1:00 PM",
+    checkOut: "10:00 AM",
+    averageRating: 4.65,
+    reviewCount: 57,
     reviews: [
       {
-        id: "r4",
-        guestName: "The Gupta Family",
+        id: "r4a",
+        guestName: "Ankit",
         rating: 5,
         review:
-          "Hosted our family pilgrimage with 12 members. The villa was immaculate and the team arranged all our temple visits seamlessly.",
-        date: "2025-08-15",
+          "Had a wonderful stay at this Airbnb! The host was incredibly welcoming and made sure I had everything I needed to feel at home. The location was perfect for exploring Varanasi.",
+        date: "2026-06-02",
+      },
+      {
+        id: "r4b",
+        guestName: "Iman",
+        rating: 5,
+        review:
+          "I stayed for 3 days and had a pleasant experience. The place is a bit away from the city centre, but that also makes it peaceful and calm. It's a good stay for anyone who prefers a quiet location away from the busy areas.",
+        date: "2026-05-26",
+      },
+      {
+        id: "r4c",
+        guestName: "Akash",
+        rating: 5,
+        review:
+          "The place is very beautiful—a beautiful, well-maintained garden and a nice cottage with all amenities. It feels like a house at a good price range; everything is available inside the cottage.",
+        date: "2026-05-19",
+      },
+      {
+        id: "r4d",
+        guestName: "Anurag",
+        rating: 5,
+        review:
+          "Nice quiet place if you want a peaceful stay experience away from the crowds in Varanasi. You can definitely opt for this stay. Also if you are looking for a workation, this is one of the better options.",
+        date: "2026-04-01",
+      },
+      {
+        id: "r4e",
+        guestName: "Rishita",
+        rating: 4,
+        review:
+          "The host is very accommodating and responsive. The place is just like the photos and very spacious. It is a little far from the main attractions of the city however not very inconvenient.",
+        date: "2026-02-01",
+      },
+      {
+        id: "r4f",
+        guestName: "Dhruv",
+        rating: 5,
+        review:
+          "It was a very wonderful experience—the staff members are friendly, the rooms are clean with a fresh aroma, and they have a very respectful behaviour. I like this place and the family-friendly vibe it gives.",
+        date: "2026-01-01",
       },
     ],
     faq: [
@@ -445,6 +356,7 @@ export const properties: Property[] = [
   {
     id: "5",
     slug: "the-pearl-manor",
+    airbnbUrl: "https://www.airbnb.co.in/h/thepearlmanorvns",
     name: "The Pearl Manor",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -453,7 +365,7 @@ export const properties: Property[] = [
       "This property is on first & second floor with no lift Its a 2BHK, 2BHK & 1BHK unit combined situated side by side 5 kms from Kashi Vishwanath The Pearl Manor – Luxury 5BHK Penthouse Welcome to The Pearl Manor, an opulent 5BHK penthouse designed for large families, wedding groups, and travelers seeking the finest stay in Varanasi. With expansive interiors, elegant furnishings, and premium amenities, this residence feels like your own private palace of comfort.",
     shortDescription:
       "This property is on first & second floor with no lift  Its a 2BHK, 2BHK & 1BHK unit combined situated side by side  5 kms from Kashi Vishwanath  The Pearl...",
-    category: "luxury-villa",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: pm.featured,
     gallery: [
         "/images/properties/the-pearl-manor/1.png",
@@ -462,78 +374,74 @@ export const properties: Property[] = [
         "/images/properties/the-pearl-manor/4.jpg",
         "/images/properties/the-pearl-manor/5.jpg",
       ],
-    guests: 10,
+    guests: 15,
     bedrooms: 5,
     bathrooms: 6,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Parking",
-      "Power Backup",
-      "Private Terrace",
-      "Security",
-      "Housekeeping",
-    ],
+    extraBeds: "5 extra mattress",
     highlights: [
       "Luxury Interiors",
       "Heritage Property",
       "Near Temple",
       "Couples Retreat",
     ],
-    coordinates: { lat: 25.3142, lng: 83.0089 },
+    coordinates: { lat: 25.3506558, lng: 82.9704815 },
+    mapUrl: "https://maps.app.goo.gl/4cWcmRESbaSNqSCQ7",
+    mapPlace:
+      "PRITHVI PALACE HOMESTAY, S-2/346-A-19, Patrakar Puram Colony, Gilat Bazar, Bhojuveer, Varanasi, Uttar Pradesh 221002",
     destinationSlug: "varanasi",
     featured: true,
     checkIn: "1:00 PM",
     checkOut: "10:00 AM",
-    bedroomDetails: [
-      {
-        name: "Pearl Suite",
-        bedType: "King Bed",
-        features: ["Terrace Access", "Ensuite Bathroom"],
-      },
-      {
-        name: "Manor Chamber",
-        bedType: "Queen Bed",
-        features: ["Garden View", "Ensuite Bathroom"],
-      },
-      {
-        name: "Guest Room",
-        bedType: "Twin Beds",
-        features: ["Courtyard View", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Kashi Vishwanath Temple",
-        description: "The holiest Shiva temple in Varanasi.",
-        distance: "1.2 km",
-        travelTime: "15 min walk",
-        image: pm.attractions.temple,
-      },
-      {
-        name: "Dashashwamedh Ghat",
-        description: "Renowned ghat for the evening Ganga aarti.",
-        distance: "1.5 km",
-        travelTime: "18 min walk",
-        image: pm.attractions.ghat,
-      },
-    ],
-    houseRules: [
-      "Quiet hours: 10 PM – 6 AM",
-      "Check-in ID proof required for all guests",
-      "No smoking inside",
-      "Respectful attire near temples and ghats",
-    ],
+    averageRating: 4.82,
+    reviewCount: 17,
     reviews: [
       {
-        id: "r5",
-        guestName: "Ananya & Vikram Singh",
+        id: "r5a",
+        guestName: "Prabhakar",
         rating: 5,
         review:
-          "The Pearl Manor exceeded our expectations. Beautiful interiors, warm hospitality, and a perfect location for our anniversary trip to Kashi.",
-        date: "2025-07-18",
+          "Staying at this homestay in Varanasi was truly a heartwarming experience. From the moment I arrived at night by 2:40 a.m., I was welcomed with genuine warmth and hospitality.",
+        date: "2026-04-01",
+      },
+      {
+        id: "r5b",
+        guestName: "Rohit",
+        rating: 5,
+        review:
+          "The property is appropriately located in a good colony. Sarnath is the closest from this place. The host even helped give local contact for Kashi darshan and guided about the tour and places.",
+        date: "2026-03-15",
+      },
+      {
+        id: "r5c",
+        guestName: "Animesh",
+        rating: 5,
+        review:
+          "Overall, I had a good stay at this Airbnb. The place was clean, well-maintained, and matched the description. The check-in process was smooth and the host was responsive and helpful.",
+        date: "2026-02-15",
+      },
+      {
+        id: "r5d",
+        guestName: "Shashwat",
+        rating: 5,
+        review:
+          "We had a wonderful stay at this Airbnb. The place was spotlessly clean, well-maintained, and exactly as shown in the photos. The location was very convenient.",
+        date: "2026-02-10",
+      },
+      {
+        id: "r5e",
+        guestName: "Rounak",
+        rating: 5,
+        review:
+          "This place is kind of a mansion, with numerous staff taking care of every need. The house is located inside a gated community and the surrounding is very calm and quiet.",
+        date: "2026-02-01",
+      },
+      {
+        id: "r5f",
+        guestName: "Aditya",
+        rating: 5,
+        review:
+          "We were a family of 11 people. The property was clean and well maintained. It was spacious and the rooms were very comfortable along with attached bathrooms.",
+        date: "2025-12-01",
       },
     ],
     faq: [
@@ -547,6 +455,7 @@ export const properties: Property[] = [
   {
     id: "6",
     slug: "the-regal-serenity",
+    airbnbUrl: "https://www.airbnb.co.in/h/theregalserenity",
     name: "The Regal Serenity",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -555,7 +464,7 @@ export const properties: Property[] = [
       "This property is on second floor with no lift Its a 2BHK & 1BHK unit combined situated side by side 5 kms from Kashi Vishwanath The Regal Serenity Suite – Luxury 3BHK Penthouse Welcome to The Regal Serenity Suite, a luxurious 3BHK penthouse that combines elegance, comfort, and modern design. Ideal for families, wedding guests, or groups of friends, this residence offers spacious interiors and a serene atmosphere, just a short drive from Varanasi's cultural and spiritual landmarks.",
     shortDescription:
       "This property is on second floor with no lift  Its a 2BHK & 1BHK unit combined situated side by side  5 kms from Kashi Vishwanath  The Regal Serenity Suite –...",
-    category: "long-stay",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: rs.featured,
     gallery: [
         "/images/properties/the-regal-serenity/1.jpg",
@@ -564,79 +473,74 @@ export const properties: Property[] = [
         "/images/properties/the-regal-serenity/4.jpg",
         "/images/properties/the-regal-serenity/5.jpg",
       ],
-    guests: 6,
+    guests: 9,
     bedrooms: 3,
     bathrooms: 3,
-    amenities: [
-      "High-Speed WiFi",
-      "Fully Equipped Kitchen",
-      "Air Conditioning",
-      "Smart TV",
-      "Parking",
-      "Power Backup",
-      "Workspace",
-      "Private Garden",
-      "Security",
-      "Housekeeping",
-    ],
+    extraBeds: "3 extra mattress",
     highlights: [
       "Remote Work Friendly",
       "Long Stay Friendly",
       "Private Garden",
       "Peaceful Neighbourhood",
     ],
-    coordinates: { lat: 25.2985, lng: 82.9951 },
+    coordinates: { lat: 25.3506558, lng: 82.9704815 },
+    mapUrl: "https://maps.app.goo.gl/4cWcmRESbaSNqSCQ7",
+    mapPlace:
+      "PRITHVI PALACE HOMESTAY, S-2/346-A-19, Patrakar Puram Colony, Gilat Bazar, Bhojuveer, Varanasi, Uttar Pradesh 221002",
     destinationSlug: "varanasi",
     featured: true,
-    checkIn: "12:00 PM",
-    checkOut: "11:00 AM",
-    bedroomDetails: [
-      {
-        name: "Serenity Suite",
-        bedType: "King Bed",
-        features: ["Garden View", "Ensuite Bathroom", "Workspace"],
-      },
-      {
-        name: "Study Room",
-        bedType: "Queen Bed",
-        features: ["Dedicated Desk", "Ensuite Bathroom"],
-      },
-      {
-        name: "Garden Room",
-        bedType: "Twin Beds",
-        features: ["Garden Access", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Assi Ghat",
-        description: "Popular ghat for morning yoga and boat rides.",
-        distance: "2.5 km",
-        travelTime: "10 min",
-        image: rs.attractions.assi,
-      },
-      {
-        name: "Banaras Hindu University",
-        description: "Historic campus with museums and cultural events.",
-        distance: "3 km",
-        travelTime: "12 min",
-        image: rs.attractions.bhu,
-      },
-    ],
-    houseRules: [
-      "Quiet hours: 10 PM – 7 AM",
-      "Workspace areas for registered guests only",
-      "Monthly stay discounts available on request",
-      "No parties without prior approval",
-    ],
+    checkIn: "1:00 PM",
+    checkOut: "10:00 AM",
+    averageRating: 4.86,
+    reviewCount: 36,
     reviews: [
       {
-        id: "r6",
-        guestName: "David Chen",
+        id: "r6a",
+        guestName: "Tanmay",
         rating: 5,
         review:
-          "Spent three weeks at The Regal Serenity while working remotely. Fast WiFi, peaceful garden, and the team made long-stay living effortless.",
-        date: "2025-06-30",
+          "Overall the stay was good and completely value for money. It was clean, safe for families, and the host was responsive and well mannered.",
+        date: "2026-05-19",
+      },
+      {
+        id: "r6b",
+        guestName: "Jivan",
+        rating: 5,
+        review:
+          "The apartment was super clean, stylish, and exactly as described—comfortable bed, great natural light, and a fantastic location. The check-in was seamless, and Priya was very helpful.",
+        date: "2026-05-01",
+      },
+      {
+        id: "r6c",
+        guestName: "Rajesh",
+        rating: 5,
+        review:
+          "Priya was very responsive and answered all our queries promptly. We stayed in a 3 BHK apartment on the 2nd floor, and the place looked exactly like the photos.",
+        date: "2026-03-15",
+      },
+      {
+        id: "r6d",
+        guestName: "Saurabh",
+        rating: 5,
+        review:
+          "Had a wonderful stay! The place was clean, well-maintained, and exactly as described. The host was very responsive and helpful throughout. Location was convenient and peaceful.",
+        date: "2026-03-10",
+      },
+      {
+        id: "r6e",
+        guestName: "Ravi",
+        rating: 5,
+        review:
+          "We had a wonderful stay at this apartment. The place was very beautiful, well-maintained, and extremely clean. Everything was perfectly organized and made our stay very comfortable.",
+        date: "2026-03-01",
+      },
+      {
+        id: "r6f",
+        guestName: "Nivas",
+        rating: 5,
+        review:
+          "One of the best properties we have ever booked through Airbnb. Very spacious rooms, spacious clean bathrooms and a beautiful kitchen gave us a feel of a homey environment.",
+        date: "2026-01-01",
       },
     ],
     faq: [
@@ -650,6 +554,7 @@ export const properties: Property[] = [
   {
     id: "7",
     slug: "the-velvet-lotus",
+    airbnbUrl: "https://www.airbnb.co.in/h/thevelvetlotus",
     name: "The Velvet Lotus",
     city: "Varanasi",
     state: "Uttar Pradesh",
@@ -658,7 +563,7 @@ export const properties: Property[] = [
       "This property is on first floor with no lift 5 kms from Kashi Vishwanath Welcome to The Velvet Lotus Residence A peaceful 2BHK retreat designed for comfort and style. With elegant interiors, cozy bedrooms, and a fully furnished living space, this home is perfect for families or small groups. Located just 6 km from Kashi Vishwanath, it offers a calm escape while keeping you close to the city's spiritual and cultural heart.",
     shortDescription:
       "This property is on first floor with no lift  5 kms from Kashi Vishwanath  Welcome to The Velvet Lotus Residence  A peaceful 2BHK retreat designed for comfort...",
-    category: "pilgrimage",
+    categories: [...PROPERTY_CATEGORIES],
     featuredImage: vl.featured,
     gallery: [
         "/images/properties/the-velvet-lotus/1.jpg",
@@ -667,72 +572,74 @@ export const properties: Property[] = [
         "/images/properties/the-velvet-lotus/4.jpg",
         "/images/properties/the-velvet-lotus/5.jpg",
       ],
-    guests: 4,
+    guests: 6,
     bedrooms: 2,
     bathrooms: 3,
-    amenities: [
-      "High-Speed WiFi",
-      "Air Conditioning",
-      "Smart TV",
-      "Power Backup",
-      "Meditation Space",
-      "Yoga Mats",
-      "Security",
-      "Housekeeping",
-    ],
+    extraBeds: "2 extra mattress",
     highlights: [
       "Spiritual Retreat",
       "Near Temple",
       "Boutique Stay",
       "Meditation Space",
     ],
-    coordinates: { lat: 25.3168, lng: 83.0072 },
+    coordinates: { lat: 25.3506558, lng: 82.9704815 },
+    mapUrl: "https://maps.app.goo.gl/4cWcmRESbaSNqSCQ7",
+    mapPlace:
+      "PRITHVI PALACE HOMESTAY, S-2/346-A-19, Patrakar Puram Colony, Gilat Bazar, Bhojuveer, Varanasi, Uttar Pradesh 221002",
     destinationSlug: "varanasi",
     featured: true,
-    checkIn: "12:00 PM",
+    checkIn: "1:00 PM",
     checkOut: "10:00 AM",
-    bedroomDetails: [
-      {
-        name: "Lotus Suite",
-        bedType: "King Bed",
-        features: ["Temple View", "Ensuite Bathroom", "Meditation Nook"],
-      },
-      {
-        name: "Velvet Room",
-        bedType: "Queen Bed",
-        features: ["Courtyard View", "Ensuite Bathroom"],
-      },
-    ],
-    nearbyAttractions: [
-      {
-        name: "Vishwanath Gali",
-        description: "Historic lane leading to Kashi Vishwanath Temple.",
-        distance: "400 m",
-        travelTime: "6 min walk",
-        image: vl.attractions.gali,
-      },
-      {
-        name: "Dashashwamedh Ghat",
-        description: "Famous ghat for the spectacular evening Ganga aarti.",
-        distance: "900 m",
-        travelTime: "12 min walk",
-        image: vl.attractions.ghat,
-      },
-    ],
-    houseRules: [
-      "Silence during morning meditation hours (6–8 AM)",
-      "Vegetarian meals only on premises",
-      "Remove footwear in prayer areas",
-      "Respectful attire near temples",
-    ],
+    averageRating: 4.86,
+    reviewCount: 43,
     reviews: [
       {
-        id: "r7",
-        guestName: "Lakshmi Iyer",
+        id: "r7a",
+        guestName: "Arvind",
         rating: 5,
         review:
-          "The Velvet Lotus was exactly what I needed for my spiritual retreat. Peaceful, beautiful, and deeply connected to the soul of Kashi.",
-        date: "2025-08-02",
+          "House was good and well furnished; room, hall, and bathroom were also clean. There was a little issue with search location—needs to be clearer about location—and the kitchen could be improved.",
+        date: "2026-05-01",
+      },
+      {
+        id: "r7b",
+        guestName: "Atul",
+        rating: 5,
+        review:
+          "Had a wonderful one-day stay at this Airbnb in Varanasi! From the moment I arrived, everything felt thoughtfully arranged and welcoming. The space was clean and comfortable.",
+        date: "2026-04-15",
+      },
+      {
+        id: "r7c",
+        guestName: "Vineet",
+        rating: 5,
+        review:
+          "This place is absolutely wonderful. Prime location, peaceful environment, responsive host, sincere caretaker, parking space and beautiful interiors make it a perfect place for a stay.",
+        date: "2026-04-01",
+      },
+      {
+        id: "r7d",
+        guestName: "Purvanshi",
+        rating: 5,
+        review:
+          "The place was spotless and exactly as shown in the photos. The atmosphere was calm, peaceful, and free from unnecessary disturbances. The staff were friendly and helpful.",
+        date: "2026-03-15",
+      },
+      {
+        id: "r7e",
+        guestName: "Saurabh",
+        rating: 5,
+        review:
+          "It was a great, peaceful and comfortable stay. Big rooms, clean washroom, easy to check-in and caretaker Mr Deepak was helpful with our luggage transfer to the first floor.",
+        date: "2026-03-10",
+      },
+      {
+        id: "r7f",
+        guestName: "Arpith",
+        rating: 5,
+        review:
+          "We had a great stay at this property. The place is good, clean, and very spacious, which made our stay comfortable. A special thanks to the caretaker, Deepak Pandey.",
+        date: "2026-03-01",
       },
     ],
     faq: [
@@ -749,10 +656,6 @@ export function getPropertyBySlug(slug: string): Property | undefined {
   return properties.find((p) => p.slug === slug);
 }
 
-export function getFeaturedProperties(): Property[] {
-  return properties.filter((p) => p.featured);
-}
-
 export function getPropertiesByDestination(
   destinationSlug: string
 ): Property[] {
@@ -760,7 +663,7 @@ export function getPropertiesByDestination(
 }
 
 export function getPropertiesByCategory(
-  category: Property["category"]
+  category: Property["categories"][number]
 ): Property[] {
-  return properties.filter((p) => p.category === category);
+  return properties.filter((p) => p.categories.includes(category));
 }

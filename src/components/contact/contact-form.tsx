@@ -31,7 +31,11 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-export function ContactForm() {
+interface ContactFormProps {
+  disabled?: boolean;
+}
+
+export function ContactForm({ disabled = false }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [inquiryId, setInquiryId] = useState("");
@@ -47,6 +51,7 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data: FormData) => {
+    if (disabled) return;
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/contact", {
@@ -105,14 +110,14 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <Label htmlFor="name">Name *</Label>
-          <Input id="name" {...register("name")} className="mt-1.5" />
+          <Input id="name" {...register("name")} className="mt-1.5" disabled={disabled} />
           {errors.name && (
             <p className="text-red-600 text-xs mt-1">{errors.name.message}</p>
           )}
         </div>
         <div>
           <Label htmlFor="email">Email *</Label>
-          <Input id="email" type="email" {...register("email")} className="mt-1.5" />
+          <Input id="email" type="email" {...register("email")} className="mt-1.5" disabled={disabled} />
           {errors.email && (
             <p className="text-red-600 text-xs mt-1">{errors.email.message}</p>
           )}
@@ -122,15 +127,15 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <Label htmlFor="phone">Phone *</Label>
-          <Input id="phone" type="tel" {...register("phone")} className="mt-1.5" />
+          <Input id="phone" type="tel" {...register("phone")} className="mt-1.5" disabled={disabled} />
           {errors.phone && (
             <p className="text-red-600 text-xs mt-1">{errors.phone.message}</p>
           )}
         </div>
         <div>
           <Label htmlFor="property">Property Interested In</Label>
-          <Select onValueChange={(v) => setValue("propertyInterested", v)}>
-            <SelectTrigger className="mt-1.5">
+          <Select onValueChange={(v) => setValue("propertyInterested", v)} disabled={disabled}>
+            <SelectTrigger className="mt-1.5" disabled={disabled}>
               <SelectValue placeholder="Select a property" />
             </SelectTrigger>
             <SelectContent>
@@ -152,6 +157,7 @@ export function ContactForm() {
             type="date"
             {...register("checkInDate")}
             className="mt-1.5"
+            disabled={disabled}
           />
         </div>
         <div>
@@ -161,6 +167,7 @@ export function ContactForm() {
             type="date"
             {...register("checkOutDate")}
             className="mt-1.5"
+            disabled={disabled}
           />
         </div>
         <div>
@@ -171,6 +178,7 @@ export function ContactForm() {
             min="1"
             {...register("numberOfGuests")}
             className="mt-1.5"
+            disabled={disabled}
           />
         </div>
       </div>
@@ -183,18 +191,25 @@ export function ContactForm() {
           {...register("message")}
           className="mt-1.5"
           placeholder="Tell us about your travel plans..."
+          disabled={disabled}
         />
         {errors.message && (
           <p className="text-red-600 text-xs mt-1">{errors.message.message}</p>
         )}
       </div>
 
-      <Button type="submit" disabled={isSubmitting} className="w-full md:w-auto">
+      <Button
+        type="submit"
+        disabled={disabled || isSubmitting}
+        className="w-full md:w-auto"
+      >
         {isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" />
             Sending...
           </>
+        ) : disabled ? (
+          "Coming Soon"
         ) : (
           "Send Inquiry"
         )}

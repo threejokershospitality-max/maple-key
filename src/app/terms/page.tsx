@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
+import { BrandHero } from "@/components/shared/brand-hero";
 
 export const metadata: Metadata = createMetadata({
   title: "Terms & Conditions",
@@ -11,11 +12,10 @@ export const metadata: Metadata = createMetadata({
 export default function TermsPage() {
   return (
     <div className="pt-20">
-      <div className="container mx-auto px-4 lg:px-8 py-16 max-w-3xl">
-        <h1 className="font-heading text-4xl text-forest mb-8">
-          Terms & Conditions
-        </h1>
-        <div className="prose prose-lg text-charcoal/80 space-y-6">
+      <BrandHero subtitle="Legal" title="Terms & Conditions" />
+
+      <div className="site-container section-padding-sm max-w-3xl">
+        <div className="surface-card p-8 md:p-10 prose prose-lg text-body space-y-6">
           <p>Last updated: June 2026</p>
 
           <h2 className="font-heading text-2xl text-forest">

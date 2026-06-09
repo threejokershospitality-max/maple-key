@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig, navLinks } from "@/lib/config";
 import { properties } from "@/data/properties";
-import { destinations } from "@/data/destinations";
 import { getPhoneUrl, getEmailUrl } from "@/lib/whatsapp";
 
 export function Footer() {
@@ -10,9 +9,9 @@ export function Footer() {
 
   return (
     <footer className="bg-heritage-gradient text-ivory" role="contentinfo">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="space-y-4">
+      <div className="site-container section-padding-sm">
+        <div className="section-grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
+          <div className="min-w-0 space-y-4">
             <div>
               <h3 className="font-heading text-2xl text-ivory">Maple & Key</h3>
               <p className="text-xs text-saffron tracking-[0.2em] uppercase mt-1">
@@ -24,7 +23,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h4 className="font-heading text-lg text-saffron mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -37,18 +36,10 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/testimonials"
-                  className="text-sm text-ivory/70 hover:text-saffron transition-colors"
-                >
-                  Testimonials
-                </Link>
-              </li>
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h4 className="font-heading text-lg text-saffron mb-4">Properties</h4>
             <ul className="space-y-2">
               {properties.map((property) => (
@@ -64,7 +55,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h4 className="font-heading text-lg text-saffron mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="space-y-1">
@@ -90,7 +81,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-ivory/70">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>
+                <span className="break-words">
                   {siteConfig.address.street}
                   <br />
                   {siteConfig.address.streetLine2}
@@ -113,7 +104,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-xs text-ivory/50">
             &copy; {currentYear} {siteConfig.name}. A brand of{" "}
             {siteConfig.parentBrand}. All rights reserved.

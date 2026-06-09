@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={[organizationSchema(), localBusinessSchema()]} />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col safe-area-top">
         <Header />
         <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />

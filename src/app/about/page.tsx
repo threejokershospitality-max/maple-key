@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import {
   Heart,
   Star,
@@ -11,8 +10,8 @@ import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
 import { brandValues, milestones } from "@/data/homepage";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { FinalCTA } from "@/components/home/final-cta";
-import { images } from "@/lib/images";
+import { BrandHero } from "@/components/shared/brand-hero";
+import { FinalCTA } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = createMetadata({
   title: "About Us",
@@ -32,26 +31,14 @@ const valueIconMap: Record<string, React.ComponentType<{ className?: string }>> 
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
-        <Image
-          src={images.about}
-          alt="About Maple and Key"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-charcoal/50" />
-        <div className="relative z-10 text-center text-ivory px-4">
-          <h1 className="font-heading text-4xl md:text-5xl mb-4">Our Story</h1>
-          <p className="text-ivory/80 max-w-xl mx-auto">
-            {siteConfig.tagline}
-          </p>
-        </div>
-      </section>
+      <BrandHero
+        subtitle="About Us"
+        title="Our Story"
+        description={siteConfig.tagline}
+      />
 
-      <section className="py-16 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+      <section className="section-padding-sm">
+        <div className="site-container max-w-3xl">
           <SectionHeading
             subtitle="The Journey"
             title="Maple & Key"
@@ -78,8 +65,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-accent/30">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+      <section className="section-padding-sm section-surface-muted">
+        <div className="site-container max-w-3xl">
           <SectionHeading
             subtitle="Parent Company"
             title={siteConfig.parentBrand}
@@ -95,22 +82,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="section-padding-sm">
+        <div className="site-container">
           <SectionHeading
             subtitle="What We Stand For"
             title="Our Values"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {brandValues.map((value) => {
               const Icon = valueIconMap[value.icon] || Heart;
               return (
                 <div
                   key={value.id}
-                  className="text-center p-6 bg-ivory rounded-sm shadow-luxury"
+                  className="surface-card text-center p-6"
                 >
-                  <div className="w-12 h-12 mx-auto rounded-full bg-accent flex items-center justify-center mb-4">
-                    <Icon className="h-6 w-6 text-forest" />
+                  <div className="icon-well w-12 h-12 mx-auto mb-4">
+                    <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-heading text-lg text-forest mb-2">
                     {value.title}
@@ -123,8 +110,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-accent/30">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+      <section className="section-padding-sm section-surface-muted">
+        <div className="site-container max-w-3xl">
           <SectionHeading
             subtitle="Our Standards"
             title="Hospitality Philosophy"
@@ -146,14 +133,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+      <section className="section-padding-sm">
+        <div className="site-container max-w-3xl">
           <SectionHeading subtitle="Milestones" title="Our Timeline" />
           <div className="relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-beige md:-translate-x-px" />
             {milestones.map((milestone, i) => (
               <div
-                key={milestone.year}
+                key={milestone.id}
                 className={`relative flex items-start gap-8 mb-10 ${
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}

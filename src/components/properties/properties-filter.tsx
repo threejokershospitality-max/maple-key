@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Property } from "@/types";
+import { Property, PropertyCategory } from "@/types";
 import { PropertyCard } from "@/components/shared/property-card";
 import { categoryLabels } from "@/data/faqs";
 import { destinations } from "@/data/destinations";
@@ -49,7 +49,9 @@ export function PropertiesFilter({
     }
 
     if (category !== "all") {
-      result = result.filter((p) => p.category === category);
+      result = result.filter((p) =>
+        p.categories.includes(category as PropertyCategory)
+      );
     }
 
     switch (sort) {

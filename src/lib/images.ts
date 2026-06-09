@@ -1,15 +1,11 @@
-/** Local dummy images served from /public/images */
+/** Local images served from /public/images */
 
 export const images = {
-  hero: "/images/hero.jpg",
+  hero: "/images/hero/varanasi-river-boat.png",
+  heroAlt:
+    "Guest on a wooden boat looking across the Ganges toward the ghats of Varanasi",
   ghatAarti: "/images/ghat-aarti.jpg",
-  ghatSunrise: "/images/ghat-aarti.jpg",
   heritageHaveli: "/images/heritage-haveli.jpg",
-  luxuryInterior: "/images/luxury-interior.jpg",
-  villaExterior: "/images/villa-exterior.jpg",
-  cuisine: "/images/cuisine.jpg",
-  about: "/images/luxury-interior.jpg",
-  experiencesHero: "/images/ghat-aarti.jpg",
 
   destinations: {
     varanasi: {
@@ -42,23 +38,13 @@ export const images = {
         "/images/properties/the-wayne-manor/4.jpg",
         "/images/properties/the-wayne-manor/5.jpg",
       ],
-      attractions: {
-        temple: "/images/ghat-aarti.jpg",
-        ghat: "/images/ghat-aarti.jpg",
-        manikarnika: "/images/ghat-aarti.jpg",
-      },
     },
     goldenDior: {
-      featured: "/images/properties/kashi-courtyard-1.jpg",
+      featured: "/images/properties/the-golden-dior/1.jpg",
       gallery: [
-        "/images/properties/kashi-courtyard-1.jpg",
-        "/images/properties/kashi-courtyard-2.jpg",
-        "/images/properties/kashi-courtyard-3.jpg",
+        "/images/properties/the-golden-dior/1.jpg",
+        "/images/properties/the-golden-dior/2.jpg",
       ],
-      attractions: {
-        gali: "/images/ghat-aarti.jpg",
-        assi: "/images/ghat-aarti.jpg",
-      },
     },
     havenRetreat: {
       featured: "/images/properties/the-haven-retreat/1.png",
@@ -69,10 +55,6 @@ export const images = {
         "/images/properties/the-haven-retreat/4.jpg",
         "/images/properties/the-haven-retreat/5.jpg",
       ],
-      attractions: {
-        assi: "/images/ghat-aarti.jpg",
-        bhu: "/images/ghat-aarti.jpg",
-      },
     },
     gardenveilCottage: {
       featured: "/images/properties/the-gardenveil-cottage/1.jpg",
@@ -83,10 +65,6 @@ export const images = {
         "/images/properties/the-gardenveil-cottage/4.jpg",
         "/images/properties/the-gardenveil-cottage/5.jpg",
       ],
-      attractions: {
-        sankatMochan: "/images/ghat-aarti.jpg",
-        sarnath: "/images/ghat-aarti.jpg",
-      },
     },
     pearlManor: {
       featured: "/images/properties/the-pearl-manor/1.png",
@@ -97,10 +75,6 @@ export const images = {
         "/images/properties/the-pearl-manor/4.jpg",
         "/images/properties/the-pearl-manor/5.jpg",
       ],
-      attractions: {
-        temple: "/images/ghat-aarti.jpg",
-        ghat: "/images/ghat-aarti.jpg",
-      },
     },
     regalSerenity: {
       featured: "/images/properties/the-regal-serenity/1.jpg",
@@ -111,10 +85,6 @@ export const images = {
         "/images/properties/the-regal-serenity/4.jpg",
         "/images/properties/the-regal-serenity/5.jpg",
       ],
-      attractions: {
-        assi: "/images/ghat-aarti.jpg",
-        bhu: "/images/ghat-aarti.jpg",
-      },
     },
     velvetLotus: {
       featured: "/images/properties/the-velvet-lotus/1.jpg",
@@ -125,45 +95,43 @@ export const images = {
         "/images/properties/the-velvet-lotus/4.jpg",
         "/images/properties/the-velvet-lotus/5.jpg",
       ],
-      attractions: {
-        gali: "/images/ghat-aarti.jpg",
-        ghat: "/images/ghat-aarti.jpg",
-      },
     },
   },
 
   experiences: {
-    family: "/images/experiences/exp-1.jpg",
-    spiritual: "/images/experiences/exp-2.jpg",
-    weekend: "/images/experiences/exp-3.jpg",
-    longStay: "/images/luxury-interior.jpg",
-    workation: "/images/villa-exterior.jpg",
-    group: "/images/properties/banaras-villa-1.jpg",
+    foodTrail: "/images/experiences/food-trail.jpg",
+    sunriseBoat: "/images/experiences/sunrise-boat-ride.jpg",
+    kashiVishwanath: "/images/experiences/kashi-vishwanath.jpg",
+    sarnathHeritage: "/images/experiences/sarnath-heritage.jpg",
+    oldCityWalk: "/images/experiences/old-city-walk.jpg",
+    gangaAarti: "/images/experiences/ganga-aarti.jpg",
+    banarasiSilk: "/images/experiences/banarasi-silk.jpg",
+    photographyTour: "/images/experiences/photography-tour.jpg",
+    ramnagarFort: "/images/experiences/ramnagar-fort.jpg",
+    classicalMusic: "/images/experiences/classical-music.jpg",
+    streetFoodNight: "/images/experiences/street-food-night.jpg",
+    yogaMeditation: "/images/experiences/yoga-meditation.jpg",
+    ayodhyaDayTrip: "/images/experiences/ayodhya-day-trip.jpg",
+    prayagrajDayTrip: "/images/experiences/prayagraj-day-trip.jpg",
+    templeCircuit: "/images/experiences/temple-circuit.jpg",
+    subahEBanaras: "/images/experiences/subah-e-banaras.jpg",
+    shoppingConcierge: "/images/experiences/shopping-concierge.jpg",
   },
 
   categories: {
-    family: "/images/categories/cat-1.jpg",
-    heritage: "/images/categories/cat-2.jpg",
-    group: "/images/categories/cat-3.jpg",
-    pilgrimage: "/images/categories/cat-4.jpg",
-    longStay: "/images/categories/cat-5.jpg",
-    weekend: "/images/categories/cat-6.jpg",
+    familyVacation: "/images/categories/family-vacations.jpg",
+    luxuryVilla: "/images/categories/luxury-villas.jpg",
+    groupRetreat: "/images/categories/group-retreats.jpg",
+    pilgrimage: "/images/categories/pilgrimage-stays.jpg",
+    weekendEscape: "/images/categories/weekend-escapes.jpg",
+    heritageStay: "/images/categories/heritage-stay.jpg",
   },
 
   local: {
-    spiritual: "/images/local/local-1.jpg",
-    food: "/images/local/local-2.jpg",
-    sites: "/images/ghat-aarti.jpg",
-    family: "/images/local/local-4.jpg",
-  },
-
-  guests: {
-    guest1: "/images/guests/guest-1.jpg",
-    guest2: "/images/guests/guest-2.jpg",
-    guest3: "/images/guests/guest-3.jpg",
-    guest4: "/images/guests/guest-4.jpg",
-    guest5: "/images/guests/guest-5.jpg",
-    guest6: "/images/guests/guest-6.jpg",
+    spiritual: "/images/destinations/varanasi/ganga-aarti.jpg",
+    food: "/images/destinations/varanasi/banarasi-food.jpg",
+    sites: "/images/destinations/varanasi/dashashwamedh-ghat.jpg",
+    family: "/images/destinations/varanasi/boat-sunrise.jpg",
   },
 
   og: "/og-image.jpg",

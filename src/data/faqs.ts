@@ -43,15 +43,14 @@ export const categoryLabels: Record<string, string> = {
   "luxury-villa": "Luxury Villas",
   "group-retreat": "Group Retreats",
   pilgrimage: "Pilgrimage Stays",
-  "long-stay": "Long Stays",
   "weekend-escape": "Weekend Escapes",
+  "heritage-stay": "Heritage Stay",
 };
 
 export const experienceCategoryLabels: Record<string, string> = {
   "family-vacations": "Family Vacations",
   "spiritual-journeys": "Spiritual Journeys",
   "weekend-getaways": "Weekend Getaways",
-  "long-stays": "Long Stays",
   workations: "Workations",
   "group-gatherings": "Group Gatherings",
 };

@@ -29,7 +29,7 @@ export function PropertyGallery({ images, name }: PropertyGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 h-[50vh] md:h-[60vh]">
+      <div className="grid h-[42vh] min-h-[260px] grid-cols-1 gap-2 md:h-[60vh] md:grid-cols-4">
         <button
           onClick={() => openLightbox(0)}
           className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-sm group"

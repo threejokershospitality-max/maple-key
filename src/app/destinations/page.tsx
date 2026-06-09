@@ -5,7 +5,8 @@ import { MapPin, ArrowRight, Clock } from "lucide-react";
 import { destinations } from "@/data/destinations";
 import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
-import { SectionHeading } from "@/components/shared/section-heading";
+import { BrandHero } from "@/components/shared/brand-hero";
+import { FinalCTA } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = createMetadata({
   title: "Varanasi",
@@ -17,24 +18,20 @@ export const metadata: Metadata = createMetadata({
 export default function DestinationsPage() {
   return (
     <div className="pt-20">
-      <section className="py-16 lg:py-20 bg-accent/30">
-        <div className="container mx-auto px-4 lg:px-8">
-          <SectionHeading
-            subtitle="Our Home"
-            title="Varanasi"
-            description="India's eternal spiritual capital, curated stays on the banks of the sacred Ganges."
-          />
-        </div>
-      </section>
+      <BrandHero
+        subtitle="Our Home"
+        title="Varanasi"
+        description="India's eternal spiritual capital, curated stays on the banks of the sacred Ganges."
+      />
 
-      <section className="py-12 lg:py-16">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="section-padding-sm">
+        <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {destinations.map((dest) => (
               <Link
                 key={dest.id}
                 href={`/destinations/${dest.slug}`}
-                className="group block bg-ivory rounded-sm overflow-hidden shadow-luxury hover:shadow-luxury-lg transition-all duration-500"
+                className="group surface-card-interactive overflow-hidden"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
@@ -55,9 +52,7 @@ export default function DestinationsPage() {
                   <h2 className="font-heading text-2xl text-forest group-hover:text-saffron transition-colors mb-3">
                     {dest.name}
                   </h2>
-                  <p className="text-charcoal/70 leading-relaxed mb-4">
-                    {dest.shortDescription}
-                  </p>
+                  <p className="text-body mb-4">{dest.shortDescription}</p>
                   <span className="inline-flex items-center gap-1 text-sm text-forest group-hover:text-saffron transition-colors font-medium">
                     Explore Destination
                     <ArrowRight className="h-4 w-4" />
@@ -68,7 +63,7 @@ export default function DestinationsPage() {
 
             <div
               aria-disabled="true"
-              className="relative bg-ivory rounded-sm overflow-hidden shadow-luxury opacity-90 cursor-default select-none"
+              className="surface-card relative overflow-hidden opacity-90 cursor-default select-none"
             >
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
@@ -92,7 +87,7 @@ export default function DestinationsPage() {
                 <h2 className="font-heading text-2xl text-forest/70 mb-3">
                   New Destination
                 </h2>
-                <p className="text-charcoal/70 leading-relaxed mb-4">
+                <p className="text-body mb-4">
                   We are curating our next collection of handpicked stays. Stay
                   tuned for another unforgettable destination.
                 </p>
@@ -104,6 +99,8 @@ export default function DestinationsPage() {
           </div>
         </div>
       </section>
+
+      <FinalCTA />
     </div>
   );
 }

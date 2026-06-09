@@ -20,7 +20,7 @@ export function InquiryPanel({
   if (variant === "sticky") {
     return (
       <div className="hidden lg:block sticky top-24">
-        <div className="bg-ivory border border-beige rounded-sm p-6 shadow-luxury">
+        <div className="surface-card p-6">
           <h3 className="font-heading text-xl text-forest mb-2">
             Interested in this stay?
           </h3>

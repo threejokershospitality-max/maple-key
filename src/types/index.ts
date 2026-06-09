@@ -7,20 +7,22 @@ export interface Property {
   country: string;
   description: string;
   shortDescription: string;
-  category: PropertyCategory;
+  categories: PropertyCategory[];
   featuredImage: string;
   gallery: string[];
   guests: number;
   bedrooms: number;
   bathrooms: number;
-  amenities: string[];
   highlights: string[];
   coordinates: { lat: number; lng: number };
-  nearbyAttractions: NearbyAttraction[];
-  bedroomDetails: BedroomDetail[];
-  houseRules: string[];
+  mapUrl?: string;
+  mapPlace?: string;
+  airbnbUrl?: string;
+  extraBeds?: string;
   checkIn: string;
   checkOut: string;
+  averageRating: number;
+  reviewCount: number;
   reviews: Review[];
   faq: FAQ[];
   featured?: boolean;
@@ -32,22 +34,17 @@ export type PropertyCategory =
   | "luxury-villa"
   | "group-retreat"
   | "pilgrimage"
-  | "long-stay"
-  | "weekend-escape";
+  | "weekend-escape"
+  | "heritage-stay";
 
-export interface BedroomDetail {
-  name: string;
-  bedType: string;
-  features: string[];
-}
-
-export interface NearbyAttraction {
-  name: string;
-  description: string;
-  distance: string;
-  travelTime: string;
-  image?: string;
-}
+export const PROPERTY_CATEGORIES: PropertyCategory[] = [
+  "family-vacation",
+  "luxury-villa",
+  "group-retreat",
+  "pilgrimage",
+  "weekend-escape",
+  "heritage-stay",
+];
 
 export interface Review {
   id: string;
@@ -110,27 +107,27 @@ export interface Experience {
   gallery: string[];
   category: ExperienceCategory;
   highlights: string[];
+  duration?: string;
   relatedPropertySlugs: string[];
 }
 
 export type ExperienceCategory =
-  | "family-vacations"
-  | "spiritual-journeys"
-  | "weekend-getaways"
-  | "long-stays"
-  | "workations"
-  | "group-gatherings";
+  | "food"
+  | "spiritual"
+  | "cultural"
+  | "heritage"
+  | "wellness"
+  | "day-trip"
+  | "shopping";
 
 export interface Testimonial {
   id: string;
   guestName: string;
-  guestImage: string;
   rating: number;
   review: string;
   propertySlug: string;
   propertyName: string;
   date: string;
-  guestPhotos?: string[];
   videoUrl?: string;
 }
 
@@ -199,6 +196,7 @@ export interface WhyChooseFeature {
 }
 
 export interface Milestone {
+  id: string;
   year: string;
   title: string;
   description: string;

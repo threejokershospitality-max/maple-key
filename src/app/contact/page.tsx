@@ -3,8 +3,9 @@ import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
 import { getWhatsAppUrl, getEmailUrl } from "@/lib/whatsapp";
-import { SectionHeading } from "@/components/shared/section-heading";
+import { BrandHero } from "@/components/shared/brand-hero";
 import { ContactForm } from "@/components/contact/contact-form";
+import { FinalCTA } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact Us",
@@ -16,21 +17,17 @@ export const metadata: Metadata = createMetadata({
 export default function ContactPage() {
   return (
     <div className="pt-20">
-      <section className="py-16 lg:py-20 bg-accent/30">
-        <div className="container mx-auto px-4 lg:px-8">
-          <SectionHeading
-            subtitle="Get in Touch"
-            title="Contact Us"
-            description="Our hospitality team is ready to help you plan your perfect stay. Reach out via phone, WhatsApp, email, or the form below."
-          />
-        </div>
-      </section>
+      <BrandHero
+        subtitle="Get in Touch"
+        title="Contact Us"
+        description="Our hospitality team is ready to help you plan your perfect stay. Reach out via phone, WhatsApp, or email."
+      />
 
-      <section className="py-12 lg:py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section className="section-padding-sm">
+        <div className="site-container">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="space-y-6">
-              <div className="bg-ivory border border-beige rounded-sm p-6 shadow-luxury">
+              <div className="surface-card p-6">
                 <Phone className="h-6 w-6 text-saffron mb-3" />
                 <h3 className="font-heading text-lg text-forest mb-1">Phone</h3>
                 <div className="space-y-1">
@@ -49,7 +46,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-ivory border border-beige rounded-sm p-6 shadow-luxury">
+              <div className="surface-card p-6">
                 <MessageCircle className="h-6 w-6 text-saffron mb-3" />
                 <h3 className="font-heading text-lg text-forest mb-1">
                   WhatsApp
@@ -67,7 +64,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-ivory border border-beige rounded-sm p-6 shadow-luxury">
+              <div className="surface-card p-6">
                 <Mail className="h-6 w-6 text-saffron mb-3" />
                 <h3 className="font-heading text-lg text-forest mb-1">Email</h3>
                 <a
@@ -81,7 +78,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-ivory border border-beige rounded-sm p-6 shadow-luxury">
+              <div className="surface-card p-6">
                 <MapPin className="h-6 w-6 text-saffron mb-3" />
                 <h3 className="font-heading text-lg text-forest mb-1">
                   Office
@@ -98,14 +95,34 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-2">
-              <h2 className="font-heading text-2xl text-forest mb-6">
-                Send an Inquiry
-              </h2>
-              <ContactForm />
+              <div className="surface-card relative overflow-hidden border border-dashed border-saffron/35 bg-accent/25 p-8">
+                <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+                  <div>
+                    <h2 className="font-heading text-2xl text-forest/50">
+                      Send an Inquiry
+                    </h2>
+                    <p className="mt-2 max-w-xl text-sm text-charcoal/60">
+                      Online inquiries are launching soon. Until then, reach us by
+                      phone, WhatsApp, or email.
+                    </p>
+                  </div>
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-saffron/40 bg-saffron/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-saffron">
+                    Coming Soon
+                  </span>
+                </div>
+                <div
+                  className="pointer-events-none select-none opacity-45 grayscale"
+                  aria-hidden="true"
+                >
+                  <ContactForm disabled />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <FinalCTA />
     </div>
   );
 }

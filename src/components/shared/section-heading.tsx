@@ -25,7 +25,7 @@ export function SectionHeading({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
       className={cn(
-        "mb-12",
+        "mb-8",
         align === "center" && "text-center",
         className
       )}
@@ -39,7 +39,12 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-charcoal/70 max-w-2xl mx-auto leading-relaxed">
+        <p
+          className={cn(
+            "mt-4 text-charcoal/70 leading-relaxed",
+            align === "center" && "max-w-2xl mx-auto"
+          )}
+        >
           {description}
         </p>
       )}
