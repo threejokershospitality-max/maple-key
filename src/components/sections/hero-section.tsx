@@ -27,7 +27,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-heading text-3xl leading-tight text-ivory sm:text-4xl md:text-6xl lg:text-7xl mb-6 px-1"
+          className="font-heading mb-6 whitespace-nowrap px-1 text-[clamp(0.9rem,3.8vw,4.5rem)] leading-tight text-ivory"
         >
           {siteConfig.tagline}
         </motion.h1>

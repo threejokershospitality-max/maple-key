@@ -5,10 +5,9 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/config";
-import { getPhoneUrl } from "@/lib/whatsapp";
+import { CallButton } from "@/components/shared/call-button";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -76,12 +75,7 @@ export function Header() {
           </nav>
 
           <div className="hidden xl:flex items-center gap-4">
-            <Button asChild variant="default" size="sm">
-              <a href={getPhoneUrl()}>
-                <Phone className="h-4 w-4" />
-                Call Now
-              </a>
-            </Button>
+            <CallButton size="sm" />
           </div>
 
           <button
@@ -146,12 +140,7 @@ export function Header() {
                       transition={{ delay: navLinks.length * 0.04 }}
                       className="pt-2"
                     >
-                      <Button asChild className="w-full">
-                        <a href={getPhoneUrl()}>
-                          <Phone className="h-4 w-4" />
-                          Call Now
-                        </a>
-                      </Button>
+                      <CallButton fullWidth />
                     </motion.div>
                   </div>
                 </motion.nav>

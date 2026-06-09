@@ -1,10 +1,10 @@
 "use client";
 
-import { Phone, MessageCircle, Mail } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CallButton } from "@/components/shared/call-button";
 import { cn } from "@/lib/utils";
 import {
-  getPhoneUrl,
   getWhatsAppUrl,
   getEmailUrl,
   getPropertyWhatsAppUrl,
@@ -52,11 +52,6 @@ export function ContactButtons({
 
   const widthClass = fullWidth && layout === "stack" ? "w-full" : undefined;
 
-  const callClass =
-    theme === "dark"
-      ? "bg-ivory text-forest shadow-luxury hover:bg-ivory/90 border-0"
-      : undefined;
-
   const emailClass =
     theme === "dark"
       ? "border-ivory/40 text-ivory hover:bg-ivory hover:text-forest"
@@ -77,17 +72,12 @@ export function ContactButtons({
         </Button>
       )}
       {showCall && (
-        <Button
-          asChild
+        <CallButton
           size={size}
-          variant="default"
-          className={cn(widthClass, callClass)}
-        >
-          <a href={getPhoneUrl()}>
-            <Phone className="h-4 w-4" />
-            Call Now
-          </a>
-        </Button>
+          theme={theme}
+          fullWidth={fullWidth && layout === "stack"}
+          className={widthClass}
+        />
       )}
       {showEmail && (
         <Button

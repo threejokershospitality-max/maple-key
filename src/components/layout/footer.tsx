@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { siteConfig, navLinks } from "@/lib/config";
 import { properties } from "@/data/properties";
-import { getPhoneUrl, getEmailUrl } from "@/lib/whatsapp";
+import { getEmailUrl } from "@/lib/whatsapp";
+import { CallLink } from "@/components/shared/call-button";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -60,14 +61,13 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="space-y-1">
                 {siteConfig.phones.map((phone) => (
-                  <a
+                  <CallLink
                     key={phone}
-                    href={`tel:${phone}`}
-                    className="flex items-center gap-2 text-sm text-ivory/70 hover:text-saffron transition-colors"
+                    phone={phone}
+                    className="text-sm text-ivory/70 hover:text-saffron transition-colors"
                   >
-                    <Phone className="h-4 w-4 shrink-0" />
                     {phone}
-                  </a>
+                  </CallLink>
                 ))}
               </li>
               <li>
