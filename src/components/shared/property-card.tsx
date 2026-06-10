@@ -30,7 +30,7 @@ export function PropertyCard({ property, index = 0 }: PropertyCardProps) {
         />
       </Link>
 
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <div className="flex items-center gap-1 text-sm text-saffron mb-2">
           <MapPin className="h-3.5 w-3.5" />
           <span>

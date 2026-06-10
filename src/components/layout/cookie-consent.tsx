@@ -25,7 +25,7 @@ export function CookieConsent() {
     <div
       role="dialog"
       aria-label="Cookie consent"
-      className="fixed bottom-20 lg:bottom-6 left-4 right-4 lg:left-auto lg:right-24 lg:max-w-md z-50 bg-ivory border border-beige shadow-luxury-xl rounded-sm p-6"
+      className="fixed mobile-above-bar xl:bottom-6 left-4 right-4 xl:left-auto xl:right-24 xl:max-w-md z-50 bg-ivory border border-beige shadow-luxury-xl rounded-sm p-6"
     >
       <p className="text-sm text-charcoal/80 mb-4 leading-relaxed">
         We use cookies and analytics to improve your experience. By continuing to

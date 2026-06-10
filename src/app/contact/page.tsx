@@ -5,7 +5,6 @@ import { siteConfig } from "@/lib/config";
 import { getWhatsAppUrl, getEmailUrl } from "@/lib/whatsapp";
 import { BrandHero } from "@/components/shared/brand-hero";
 import { ContactForm } from "@/components/contact/contact-form";
-import { FinalCTA } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact Us",
@@ -25,57 +24,62 @@ export default function ContactPage() {
 
       <section className="section-padding-sm">
         <div className="site-container">
+          <p className="xl:hidden text-sm text-charcoal/60 text-center mb-8">
+            Use the contact bar below for phone, WhatsApp, or email.
+          </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="space-y-6">
-              <div className="surface-card p-6">
-                <Phone className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">Phone</h3>
-                <div className="space-y-1">
-                  {siteConfig.phones.map((phone) => (
-                    <a
-                      key={phone}
-                      href={`tel:${phone}`}
-                      className="block text-charcoal/70 hover:text-saffron transition-colors"
-                    >
-                      {phone}
-                    </a>
-                  ))}
+              <div className="hidden xl:block space-y-6">
+                <div className="surface-card p-6">
+                  <Phone className="h-6 w-6 text-saffron mb-3" />
+                  <h3 className="font-heading text-lg text-forest mb-1">Phone</h3>
+                  <div className="space-y-1">
+                    {siteConfig.phones.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone}`}
+                        className="block text-charcoal/70 hover:text-saffron transition-colors"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
+                  <p className="text-xs text-charcoal/50 mt-2">
+                    Available 9 AM – 9 PM IST
+                  </p>
                 </div>
-                <p className="text-xs text-charcoal/50 mt-2">
-                  Available 9 AM – 9 PM IST
-                </p>
-              </div>
 
-              <div className="surface-card p-6">
-                <MessageCircle className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">
-                  WhatsApp
-                </h3>
-                <a
-                  href={getWhatsAppUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-charcoal/70 hover:text-saffron transition-colors"
-                >
-                  Chat with us
-                </a>
-                <p className="text-xs text-charcoal/50 mt-2">
-                  Quick responses, 24/7
-                </p>
-              </div>
+                <div className="surface-card p-6">
+                  <MessageCircle className="h-6 w-6 text-saffron mb-3" />
+                  <h3 className="font-heading text-lg text-forest mb-1">
+                    WhatsApp
+                  </h3>
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-charcoal/70 hover:text-saffron transition-colors"
+                  >
+                    Chat with us
+                  </a>
+                  <p className="text-xs text-charcoal/50 mt-2">
+                    Quick responses, 24/7
+                  </p>
+                </div>
 
-              <div className="surface-card p-6">
-                <Mail className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">Email</h3>
-                <a
-                  href={getEmailUrl()}
-                  className="text-charcoal/70 hover:text-saffron transition-colors"
-                >
-                  {siteConfig.email}
-                </a>
-                <p className="text-xs text-charcoal/50 mt-2">
-                  Response within 24 hours
-                </p>
+                <div className="surface-card p-6">
+                  <Mail className="h-6 w-6 text-saffron mb-3" />
+                  <h3 className="font-heading text-lg text-forest mb-1">Email</h3>
+                  <a
+                    href={getEmailUrl()}
+                    className="text-charcoal/70 hover:text-saffron transition-colors"
+                  >
+                    {siteConfig.email}
+                  </a>
+                  <p className="text-xs text-charcoal/50 mt-2">
+                    Response within 24 hours
+                  </p>
+                </div>
               </div>
 
               <div className="surface-card p-6">
@@ -121,8 +125,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </div>
   );
 }

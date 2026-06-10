@@ -73,7 +73,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
         <div className="site-container section-padding-sm">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 space-y-12">
+            <div className="lg:col-span-2 space-y-8 lg:space-y-12">
               <div>
                 <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
                   <h1 className="font-heading text-3xl md:text-4xl text-forest">
@@ -230,10 +230,6 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               />
             </div>
           </div>
-        </div>
-
-        <div className="lg:hidden fixed bottom-16 left-0 right-0 bg-ivory border-t border-beige p-4 z-30">
-          <InquiryPanel propertyName={property.name} />
         </div>
       </div>
     </>

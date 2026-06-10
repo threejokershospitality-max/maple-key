@@ -15,7 +15,7 @@ export function WhatsAppButton({ message, className }: WhatsAppButtonProps) {
       href={getWhatsAppUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] lg:bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-saffron text-ivory shadow-saffron hover:bg-saffron/90 hover:scale-105 transition-all duration-300 ${className || ""}`}
+      className={`fixed bottom-6 right-6 z-50 hidden h-14 w-14 items-center justify-center rounded-full bg-saffron text-ivory shadow-saffron hover:bg-saffron/90 hover:scale-105 transition-all duration-300 xl:flex ${className || ""}`}
       aria-label={`Chat with ${siteConfig.name} on WhatsApp`}
     >
       <MessageCircle className="h-7 w-7" />

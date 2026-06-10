@@ -9,10 +9,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-heritage-gradient text-ivory" role="contentinfo">
+    <footer
+      className="bg-heritage-gradient text-ivory mobile-bar-offset xl:pb-0"
+      role="contentinfo"
+    >
       <div className="site-container section-padding-sm">
-        <div className="section-grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
-          <div className="min-w-0 space-y-4">
+        <div className="section-grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10 gap-y-10">
+          <div className="min-w-0 space-y-4 col-span-2">
             <div>
               <h3 className="font-heading text-2xl text-ivory">Maple & Key</h3>
               <p className="text-xs text-saffron tracking-[0.2em] uppercase mt-1">
@@ -56,10 +59,10 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="min-w-0">
+          <div className="min-w-0 col-span-2 lg:col-span-1">
             <h4 className="font-heading text-lg text-saffron mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="space-y-1">
+              <li className="hidden xl:block space-y-1">
                 {siteConfig.phones.map((phone) => (
                   <CallLink
                     key={phone}
@@ -70,7 +73,7 @@ export function Footer() {
                   </CallLink>
                 ))}
               </li>
-              <li>
+              <li className="hidden xl:block">
                 <a
                   href={getEmailUrl()}
                   className="flex items-center gap-2 text-sm text-ivory/70 hover:text-saffron transition-colors"
@@ -92,7 +95,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6">
+            <div className="mt-6 hidden xl:block">
               <h4 className="font-heading text-sm text-saffron mb-2">Destination</h4>
               <Link
                 href="/destinations/varanasi"
@@ -104,7 +107,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="mt-12 pt-6 md:mt-16 md:pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
           <p className="text-xs text-ivory/50">
             &copy; {currentYear} {siteConfig.name}. A brand of{" "}
             {siteConfig.parentBrand}. All rights reserved.

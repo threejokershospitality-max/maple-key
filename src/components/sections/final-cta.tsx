@@ -36,7 +36,7 @@ export function FinalCTA({
           >
             {title}
           </h2>
-          <p className="text-ivory/70 max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-ivory/70 max-w-xl mx-auto mb-0 xl:mb-10 leading-relaxed">
             {description}
           </p>
 
@@ -44,7 +44,7 @@ export function FinalCTA({
             size="lg"
             theme="dark"
             whatsappLabel="WhatsApp Inquiry"
-            className="justify-center"
+            className="hidden xl:flex justify-center"
           />
         </motion.div>
       </div>

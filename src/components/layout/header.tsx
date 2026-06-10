@@ -111,7 +111,7 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.2 }}
-                  className="xl:hidden fixed inset-x-0 top-20 bottom-16 z-[91] overflow-y-auto overscroll-contain bg-ivory px-6 py-6 sm:px-8"
+                  className="xl:hidden fixed inset-x-0 top-20 mobile-menu-bottom z-[91] overflow-y-auto overscroll-contain bg-ivory px-6 py-6 sm:px-8"
                   aria-label="Mobile navigation"
                 >
                   <div className="flex flex-col gap-6">

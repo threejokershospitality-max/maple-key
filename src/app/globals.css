@@ -10,6 +10,9 @@
     --input: 32 28% 84%;
     --ring: 212 55% 24%;
     --radius: 0.25rem;
+    --mobile-contact-bar-height: calc(
+      4.5rem + env(safe-area-inset-bottom, 0px)
+    );
   }
 
   * {
@@ -56,11 +59,11 @@
   }
 
   .section-padding {
-    @apply py-16 lg:py-24;
+    @apply py-12 lg:py-24;
   }
 
   .section-padding-sm {
-    @apply py-12 lg:py-16;
+    @apply py-10 lg:py-16;
   }
 
   .section-padding,
@@ -129,6 +132,18 @@
 
   .safe-area-top {
     padding-top: env(safe-area-inset-top);
+  }
+
+  .mobile-bar-offset {
+    padding-bottom: var(--mobile-contact-bar-height);
+  }
+
+  .mobile-menu-bottom {
+    bottom: var(--mobile-contact-bar-height);
+  }
+
+  .mobile-above-bar {
+    bottom: calc(var(--mobile-contact-bar-height) + 0.75rem);
   }
 
   .heritage-divider {
