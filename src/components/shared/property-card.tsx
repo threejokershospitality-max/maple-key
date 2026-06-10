@@ -39,7 +39,7 @@ export function PropertyCard({ property, index = 0 }: PropertyCardProps) {
         </div>
 
         <Link href={`/properties/${property.slug}`}>
-          <h3 className="font-heading text-xl text-forest group-hover:text-saffron transition-colors mb-2">
+          <h3 className="font-heading text-xl text-forest can-hover:group-hover:text-saffron transition-colors mb-2">
             {property.name}
           </h3>
         </Link>

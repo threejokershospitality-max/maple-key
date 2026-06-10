@@ -27,9 +27,12 @@ export default function TestimonialsPage() {
         description="Real experiences from travelers who chose Maple & Key."
       >
         <div className="flex flex-col items-center gap-6">
-          <div className="flex items-center justify-center gap-2">
-            <StarRating rating={averageRating} />
-            <span className="font-medium text-ivory/90">
+          <div className="flex flex-nowrap items-center justify-center gap-2">
+            <StarRating
+              rating={averageRating}
+              starClassName="h-4 w-4 sm:h-5 sm:w-5"
+            />
+            <span className="whitespace-nowrap text-xs font-medium text-ivory/90 sm:text-sm">
               {averageRating} average from {totalReviews}+ reviews
             </span>
           </div>

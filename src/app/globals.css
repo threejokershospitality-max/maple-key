@@ -89,7 +89,7 @@
   }
 
   .surface-card-interactive {
-    @apply surface-card transition-all hover:-translate-y-0.5 hover:border-saffron/30 hover:shadow-luxury-lg;
+    @apply surface-card transition-all can-hover:hover:-translate-y-0.5 can-hover:hover:border-saffron/30 can-hover:hover:shadow-luxury-lg;
   }
 
   .surface-chip {

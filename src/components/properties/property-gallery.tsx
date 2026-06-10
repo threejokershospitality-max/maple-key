@@ -1,9 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Grid3X3 } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+function preloadSlide(src: string) {
+  const img = new window.Image();
+  img.src = src;
+}
 
 interface PropertyGalleryProps {
   images: string[];
@@ -17,14 +23,32 @@ export function PropertyGallery({ images, name }: PropertyGalleryProps) {
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
     setLightboxOpen(true);
+    preloadAdjacent(index);
   };
 
+  const preloadAdjacent = useCallback(
+    (current: number) => {
+      if (images.length <= 1) return;
+      preloadSlide(images[(current + 1) % images.length]);
+      preloadSlide(images[(current - 1 + images.length) % images.length]);
+    },
+    [images]
+  );
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    images.forEach(preloadSlide);
+  }, [lightboxOpen, images]);
+
   const navigate = (direction: "prev" | "next") => {
-    setCurrentIndex((prev) =>
-      direction === "next"
-        ? (prev + 1) % images.length
-        : (prev - 1 + images.length) % images.length
-    );
+    setCurrentIndex((prev) => {
+      const next =
+        direction === "next"
+          ? (prev + 1) % images.length
+          : (prev - 1 + images.length) % images.length;
+      preloadAdjacent(next);
+      return next;
+    });
   };
 
   return (
@@ -96,14 +120,22 @@ export function PropertyGallery({ images, name }: PropertyGalleryProps) {
               <ChevronLeft className="h-8 w-8" />
             </button>
 
-            <div className="relative w-full max-w-5xl h-[80vh] mx-16">
-              <Image
-                src={images[currentIndex]}
-                alt={`${name} - ${currentIndex + 1}`}
-                fill
-                className="object-contain"
-                sizes="90vw"
-              />
+            <div className="relative mx-16 h-[80vh] w-full max-w-5xl">
+              {images.map((src, i) => (
+                <Image
+                  key={src}
+                  src={src}
+                  alt={`${name} - ${i + 1}`}
+                  fill
+                  loading="eager"
+                  sizes="90vw"
+                  aria-hidden={i !== currentIndex}
+                  className={cn(
+                    "object-contain transition-opacity duration-150",
+                    i === currentIndex ? "z-[1] opacity-100" : "z-0 opacity-0"
+                  )}
+                />
+              ))}
             </div>
 
             <button

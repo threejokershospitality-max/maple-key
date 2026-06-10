@@ -78,7 +78,13 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    function ({ addVariant }: { addVariant: (name: string, definition: string) => void }) {
+      addVariant("can-hover", "@media (hover: hover) and (pointer: fine)");
+    },
+  ],
 };
 
 export default config;
