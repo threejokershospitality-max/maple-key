@@ -49,21 +49,21 @@ export function Header() {
       <div className="site-container">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex flex-col group" aria-label="Maple & Key Home">
-            <span className="font-heading text-xl text-forest tracking-wide transition-colors group-hover:text-saffron sm:text-2xl">
+            <span className="font-heading text-xl text-forest tracking-wide transition-colors group-hover:text-saffron sm:text-2xl xl:text-3xl">
               Maple & Key
             </span>
-            <span className="text-[9px] text-saffron tracking-[0.18em] uppercase sm:text-[10px] sm:tracking-[0.2em]">
+            <span className="text-[9px] text-saffron tracking-[0.18em] uppercase sm:text-[10px] sm:tracking-[0.2em] xl:text-[11px]">
               by {siteConfig.parentBrand}
             </span>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-5" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-6" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm tracking-wide transition-colors hover:text-saffron",
+                  "text-base tracking-wide transition-colors hover:text-saffron",
                   pathname === link.href
                     ? "text-saffron font-medium"
                     : "text-charcoal"
@@ -75,7 +75,7 @@ export function Header() {
           </nav>
 
           <div className="hidden xl:flex items-center gap-4">
-            <CallButton size="sm" />
+            <CallButton size="default" />
           </div>
 
           <button
@@ -111,18 +111,29 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.2 }}
-                  className="xl:hidden fixed inset-x-0 top-0 mobile-menu-bottom z-[91] overflow-y-auto overscroll-contain bg-ivory px-6 pb-6 pt-20 sm:px-8"
+                  className="xl:hidden fixed inset-x-0 top-0 mobile-menu-bottom z-[91] overflow-y-auto overscroll-contain bg-ivory"
                   aria-label="Mobile navigation"
                 >
-                  <div className="flex flex-col gap-6">
-                    <div className="pb-4 border-b border-beige">
-                      <span className="font-heading text-xl text-forest tracking-wide sm:text-2xl">
-                        Maple & Key
-                      </span>
-                      <span className="block text-[9px] text-saffron tracking-[0.18em] uppercase sm:text-[10px] sm:tracking-[0.2em]">
-                        by {siteConfig.parentBrand}
-                      </span>
+                  <div className="site-container pb-6">
+                    <div className="flex h-20 items-center justify-between border-b border-beige">
+                      <div className="flex flex-col">
+                        <span className="font-heading text-2xl text-forest tracking-wide sm:text-3xl">
+                          Maple & Key
+                        </span>
+                        <span className="text-[10px] text-saffron tracking-[0.18em] uppercase sm:text-[11px] sm:tracking-[0.2em]">
+                          by {siteConfig.parentBrand}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setIsOpen(false)}
+                        className="p-2.5 text-forest"
+                        aria-label="Close menu"
+                      >
+                        <X className="h-6 w-6" />
+                      </button>
                     </div>
+                    <div className="flex flex-col gap-6 pt-6">
                     {navLinks.map((link, i) => (
                       <motion.div
                         key={link.href}
@@ -150,6 +161,7 @@ export function Header() {
                     >
                       <CallButton fullWidth />
                     </motion.div>
+                    </div>
                   </div>
                 </motion.nav>
               </>
