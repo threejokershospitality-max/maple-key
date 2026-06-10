@@ -6,7 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navLinks, siteConfig } from "@/lib/config";
+import { navLinks } from "@/lib/config";
+import { BrandMark } from "@/components/shared/brand-mark";
 import { CallButton } from "@/components/shared/call-button";
 import { cn } from "@/lib/utils";
 
@@ -48,13 +49,8 @@ export function Header() {
     >
       <div className="site-container">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex flex-col group" aria-label="Maple & Key Home">
-            <span className="font-heading text-xl text-forest tracking-wide transition-colors group-hover:text-saffron sm:text-2xl xl:text-3xl">
-              Maple & Key
-            </span>
-            <span className="text-[9px] text-saffron tracking-[0.18em] uppercase sm:text-[10px] sm:tracking-[0.2em] xl:text-[11px]">
-              by {siteConfig.parentBrand}
-            </span>
+          <Link href="/" className="group" aria-label="Maple & Key Home">
+            <BrandMark titleClassName="transition-colors group-hover:text-saffron" />
           </Link>
 
           <nav className="hidden xl:flex items-center gap-6" aria-label="Main navigation">
@@ -116,14 +112,7 @@ export function Header() {
                 >
                   <div className="site-container pb-6">
                     <div className="flex h-20 items-center justify-between border-b border-beige">
-                      <div className="flex flex-col">
-                        <span className="font-heading text-2xl text-forest tracking-wide sm:text-3xl">
-                          Maple & Key
-                        </span>
-                        <span className="text-[10px] text-saffron tracking-[0.18em] uppercase sm:text-[11px] sm:tracking-[0.2em]">
-                          by {siteConfig.parentBrand}
-                        </span>
-                      </div>
+                      <BrandMark />
                       <button
                         type="button"
                         onClick={() => setIsOpen(false)}
