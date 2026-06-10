@@ -25,12 +25,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 site-container section-padding-sm text-center">
+      <div className="relative z-10 flex w-full items-center justify-center px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="type-display mx-auto mb-6 max-w-5xl text-balance text-ivory"
+          className="type-display mb-6 w-full max-w-5xl text-center text-ivory md:text-balance"
         >
           {siteConfig.tagline}
         </motion.h1>
@@ -39,7 +40,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="type-lead-inverse mx-auto mb-10 max-w-2xl px-2 text-ivory/85"
+          className="type-lead-inverse mb-10 w-full max-w-2xl text-center text-ivory/85"
         >
           Discover handpicked vacation homes and homestays in Varanasi, managed
           with care by {siteConfig.parentBrand}.
@@ -63,8 +64,9 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-12 heritage-divider mx-auto"
+          className="mx-auto mt-12 heritage-divider"
         />
+        </div>
       </div>
     </section>
   );
