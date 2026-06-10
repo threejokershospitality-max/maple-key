@@ -14,8 +14,8 @@ export function Footer() {
       role="contentinfo"
     >
       <div className="site-container section-padding-sm">
-        <div className="section-grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10 gap-y-10">
-          <div className="min-w-0 space-y-4 col-span-2">
+        <div className="section-grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
+          <div className="min-w-0 space-y-4">
             <div>
               <h3 className="font-heading text-2xl text-ivory">Maple & Key</h3>
               <p className="text-xs text-saffron tracking-[0.2em] uppercase mt-1">
@@ -59,10 +59,10 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="min-w-0 col-span-2 lg:col-span-1">
+          <div className="min-w-0">
             <h4 className="font-heading text-lg text-saffron mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="hidden xl:block space-y-1">
+              <li className="space-y-1">
                 {siteConfig.phones.map((phone) => (
                   <CallLink
                     key={phone}
@@ -73,7 +73,7 @@ export function Footer() {
                   </CallLink>
                 ))}
               </li>
-              <li className="hidden xl:block">
+              <li>
                 <a
                   href={getEmailUrl()}
                   className="flex items-center gap-2 text-sm text-ivory/70 hover:text-saffron transition-colors"
@@ -95,7 +95,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6 hidden xl:block">
+            <div className="mt-6">
               <h4 className="font-heading text-sm text-saffron mb-2">Destination</h4>
               <Link
                 href="/destinations/varanasi"
