@@ -49,7 +49,7 @@ export default function DestinationsPage() {
                       {dest.state}, {dest.country}
                     </span>
                   </div>
-                  <h2 className="font-heading text-2xl text-forest group-hover:text-saffron transition-colors mb-3">
+                  <h2 className="type-card-title mb-3 text-forest transition-colors can-hover:group-hover:text-saffron">
                     {dest.name}
                   </h2>
                   <p className="text-body mb-4">{dest.shortDescription}</p>
@@ -84,7 +84,7 @@ export default function DestinationsPage() {
                   <MapPin className="h-3.5 w-3.5" />
                   <span>India</span>
                 </div>
-                <h2 className="font-heading text-2xl text-forest/70 mb-3">
+                <h2 className="type-card-title mb-3 text-forest/70">
                   New Destination
                 </h2>
                 <p className="text-body mb-4">

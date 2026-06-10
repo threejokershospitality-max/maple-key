@@ -38,7 +38,7 @@ export function StayCategories() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-heading text-xl text-ivory group-hover:text-saffron transition-colors">
+                  <h3 className="type-card-title text-ivory transition-colors can-hover:group-hover:text-saffron">
                     {category.title}
                   </h3>
                   <p className="text-sm text-ivory/70 mt-1">

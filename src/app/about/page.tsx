@@ -99,7 +99,7 @@ export default function AboutPage() {
                   <div className="icon-well w-12 h-12 mx-auto mb-4">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="font-heading text-lg text-forest mb-2">
+                  <h3 className="type-subtitle mb-2 text-forest">
                     {value.title}
                   </h3>
                   <p className="text-sm text-charcoal/70">{value.description}</p>
@@ -151,7 +151,7 @@ export default function AboutPage() {
                   <p className="text-saffron font-medium text-sm">
                     {milestone.year}
                   </p>
-                  <h3 className="font-heading text-lg text-forest mt-1">
+                  <h3 className="type-subtitle mt-1 text-forest">
                     {milestone.title}
                   </h3>
                   <p className="text-sm text-charcoal/70 mt-1">

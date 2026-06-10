@@ -101,7 +101,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-heading text-lg text-forest">
+                    <h3 className="type-subtitle text-forest">
                       {attr.name}
                     </h3>
                     {attr.distance && (
@@ -136,7 +136,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent" />
                   <div className="absolute bottom-0 p-5">
-                    <h3 className="font-heading text-lg text-ivory">
+                    <h3 className="type-subtitle text-ivory">
                       {exp.title}
                     </h3>
                     <p className="text-sm text-ivory/70 mt-1">
@@ -180,7 +180,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
             <div className="space-y-8">
               {destination.travelGuide.map((section) => (
                 <div key={section.title}>
-                  <h3 className="font-heading text-xl text-forest mb-2">
+                  <h3 className="type-card-title mb-2 text-forest">
                     {section.title}
                   </h3>
                   <p className="text-charcoal/80 leading-relaxed">

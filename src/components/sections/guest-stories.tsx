@@ -38,7 +38,7 @@ export function GuestStories() {
                   />
                 ))}
               </div>
-              <p className="text-charcoal/80 leading-relaxed mb-6 text-sm">
+              <p className="text-body mb-6">
                 &ldquo;{t.review}&rdquo;
               </p>
               <div className="flex items-center gap-3">

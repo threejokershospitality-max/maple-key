@@ -39,12 +39,12 @@ export function PropertyCard({ property, index = 0 }: PropertyCardProps) {
         </div>
 
         <Link href={`/properties/${property.slug}`}>
-          <h3 className="font-heading text-xl text-forest can-hover:group-hover:text-saffron transition-colors mb-2">
+          <h3 className="type-card-title mb-2 text-forest transition-colors can-hover:group-hover:text-saffron">
             {property.name}
           </h3>
         </Link>
 
-        <p className="text-sm text-charcoal/70 leading-relaxed mb-4 line-clamp-2">
+        <p className="text-body mb-4 line-clamp-2">
           {property.shortDescription}
         </p>
 

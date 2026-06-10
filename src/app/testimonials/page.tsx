@@ -38,15 +38,15 @@ export default function TestimonialsPage() {
           </div>
           <div className="grid w-full max-w-3xl grid-cols-1 gap-6 md:grid-cols-3">
             <div className="surface-card p-5 text-center">
-              <p className="font-heading text-3xl text-saffron">{guestSatisfaction}%</p>
+              <p className="type-stat text-saffron">{guestSatisfaction}%</p>
               <p className="text-meta mt-1">Guest Satisfaction</p>
             </div>
             <div className="surface-card p-5 text-center">
-              <p className="font-heading text-3xl text-saffron">40%</p>
+              <p className="type-stat text-saffron">40%</p>
               <p className="text-meta mt-1">Repeat Guests</p>
             </div>
             <div className="surface-card p-5 text-center">
-              <p className="font-heading text-3xl text-saffron">{averageRating}</p>
+              <p className="type-stat text-saffron">{averageRating}</p>
               <p className="text-meta mt-1">Average Rating</p>
             </div>
           </div>

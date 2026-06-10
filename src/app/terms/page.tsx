@@ -18,7 +18,7 @@ export default function TermsPage() {
         <div className="surface-card p-8 md:p-10 prose prose-lg text-body space-y-6">
           <p>Last updated: June 2026</p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Acceptance of Terms
           </h2>
           <p>
@@ -27,7 +27,7 @@ export default function TermsPage() {
             do not use our website or services.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">Services</h2>
+          <h2 className="type-section-title text-forest">Services</h2>
           <p>
             {siteConfig.name}, a brand of {siteConfig.parentBrand}, provides
             curated hospitality services including vacation home rentals and
@@ -35,7 +35,7 @@ export default function TermsPage() {
             confirmation by our team.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Booking & Cancellation
           </h2>
           <p>
@@ -44,7 +44,7 @@ export default function TermsPage() {
             and season, and will be communicated at the time of booking.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Guest Responsibilities
           </h2>
           <p>
@@ -53,7 +53,7 @@ export default function TermsPage() {
             limits. Damage beyond normal wear may result in additional charges.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Limitation of Liability
           </h2>
           <p>
@@ -62,7 +62,7 @@ export default function TermsPage() {
             services, except as required by applicable law.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">Contact</h2>
+          <h2 className="type-section-title text-forest">Contact</h2>
           <p>
             For questions about these terms, contact us at {siteConfig.email}.
           </p>

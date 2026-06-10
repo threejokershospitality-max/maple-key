@@ -134,7 +134,7 @@ export function Header() {
                           href={link.href}
                           onClick={() => setIsOpen(false)}
                           className={cn(
-                            "block font-heading text-2xl transition-colors hover:text-saffron",
+                            "type-subtitle block transition-colors hover:text-saffron",
                             pathname === link.href ? "text-saffron" : "text-forest"
                           )}
                         >

@@ -83,7 +83,7 @@ export function ContactForm({ disabled = false }: ContactFormProps) {
     return (
       <div className="bg-ivory border border-beige rounded-sm p-8 text-center shadow-luxury">
         <CheckCircle className="h-12 w-12 text-forest mx-auto mb-4" />
-        <h3 className="font-heading text-2xl text-forest mb-2">Thank You!</h3>
+        <h3 className="type-section-title mb-2 text-forest">Thank You!</h3>
         <p className="text-charcoal/70 mb-2">
           We have received your inquiry and will respond within 24 hours.
         </p>

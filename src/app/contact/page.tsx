@@ -28,7 +28,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="surface-card p-6">
                 <Phone className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">Phone</h3>
+                <h3 className="type-subtitle mb-1 text-forest">Phone</h3>
                 <div className="space-y-1">
                   {siteConfig.phones.map((phone) => (
                     <a
@@ -47,9 +47,7 @@ export default function ContactPage() {
 
               <div className="surface-card p-6">
                 <MessageCircle className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">
-                  WhatsApp
-                </h3>
+                <h3 className="type-subtitle mb-1 text-forest">WhatsApp</h3>
                 <a
                   href={getWhatsAppUrl()}
                   target="_blank"
@@ -65,7 +63,7 @@ export default function ContactPage() {
 
               <div className="surface-card p-6">
                 <Mail className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">Email</h3>
+                <h3 className="type-subtitle mb-1 text-forest">Email</h3>
                 <a
                   href={getEmailUrl()}
                   className="text-charcoal/70 hover:text-saffron transition-colors"
@@ -79,9 +77,7 @@ export default function ContactPage() {
 
               <div className="surface-card p-6">
                 <MapPin className="h-6 w-6 text-saffron mb-3" />
-                <h3 className="font-heading text-lg text-forest mb-1">
-                  Office
-                </h3>
+                <h3 className="type-subtitle mb-1 text-forest">Office</h3>
                 <p className="text-charcoal/70 text-sm">
                   {siteConfig.address.street}
                   <br />
@@ -97,7 +93,7 @@ export default function ContactPage() {
               <div className="surface-card relative overflow-hidden border border-dashed border-saffron/35 bg-accent/25 p-8">
                 <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <h2 className="font-heading text-2xl text-forest/50">
+                    <h2 className="type-section-title text-forest/50">
                       Send an Inquiry
                     </h2>
                     <p className="mt-2 max-w-xl text-sm text-charcoal/60">

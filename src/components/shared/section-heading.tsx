@@ -30,18 +30,12 @@ export function SectionHeading({
         className
       )}
     >
-      {subtitle && (
-        <p className="text-saffron text-sm tracking-[0.2em] uppercase mb-3">
-          {subtitle}
-        </p>
-      )}
-      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-forest leading-tight">
-        {title}
-      </h2>
+      {subtitle && <p className="eyebrow mb-3">{subtitle}</p>}
+      <h2 className="type-page-title text-forest">{title}</h2>
       {description && (
         <p
           className={cn(
-            "mt-4 text-charcoal/70 leading-relaxed",
+            "type-lead mt-4 text-charcoal/70",
             align === "center" && "max-w-2xl mx-auto"
           )}
         >

@@ -46,9 +46,9 @@ export function ImageHero({
               {subtitle}
             </p>
           )}
-          <h1 className="font-heading text-4xl md:text-5xl text-ivory">{title}</h1>
+          <h1 className="type-page-title text-ivory">{title}</h1>
           {description && (
-            <p className="mt-4 mx-auto max-w-xl text-ivory/80 leading-relaxed">
+            <p className="type-lead-inverse mt-4 mx-auto max-w-xl">
               {description}
             </p>
           )}

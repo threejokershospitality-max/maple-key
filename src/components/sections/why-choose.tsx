@@ -46,10 +46,10 @@ export function WhyChoose() {
                 <div className="icon-well w-12 h-12 mb-5">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-heading text-xl text-forest mb-3">
+                <h3 className="type-card-title mb-3 text-forest">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-charcoal/70 leading-relaxed">
+                <p className="text-body text-charcoal/70">
                   {feature.description}
                 </p>
               </motion.div>

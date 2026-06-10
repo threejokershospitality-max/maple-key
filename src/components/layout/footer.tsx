@@ -17,7 +17,7 @@ export function Footer() {
         <div className="section-grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-10 gap-y-8">
           <div className="min-w-0 space-y-4 col-span-2 lg:col-span-1">
             <div>
-              <h3 className="font-heading text-2xl text-ivory">Maple & Key</h3>
+              <h3 className="type-card-title text-ivory">Maple & Key</h3>
               <p className="text-xs text-saffron tracking-[0.2em] uppercase mt-1">
                 by {siteConfig.parentBrand}
               </p>
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           <div className="min-w-0">
-            <h4 className="font-heading text-lg text-saffron mb-4">Quick Links</h4>
+            <h4 className="type-subtitle mb-4 text-saffron">Quick Links</h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div className="min-w-0">
-            <h4 className="font-heading text-lg text-saffron mb-4">Properties</h4>
+            <h4 className="type-subtitle mb-4 text-saffron">Properties</h4>
             <ul className="space-y-2">
               {properties.map((property) => (
                 <li key={property.slug}>
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
 
           <div className="min-w-0 col-span-2 lg:col-span-1">
-            <h4 className="font-heading text-lg text-saffron mb-4">Contact</h4>
+            <h4 className="type-subtitle mb-4 text-saffron">Contact</h4>
             <ul className="space-y-3">
               <li className="space-y-1">
                 {siteConfig.phones.map((phone) => (
@@ -96,7 +96,7 @@ export function Footer() {
             </ul>
 
             <div className="mt-6">
-              <h4 className="font-heading text-sm text-saffron mb-2">Destination</h4>
+              <h4 className="eyebrow mb-2">Destination</h4>
               <Link
                 href="/destinations/varanasi"
                 className="text-xs text-ivory/60 hover:text-saffron transition-colors"

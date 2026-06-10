@@ -21,7 +21,7 @@ export function InquiryPanel({
     return (
       <div className="hidden lg:block sticky top-24">
         <div className="surface-card p-6">
-          <h3 className="font-heading text-xl text-forest mb-2">
+          <h3 className="type-card-title mb-2 text-forest">
             Interested in this stay?
           </h3>
           <p className="text-sm text-charcoal/70 mb-6">

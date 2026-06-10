@@ -76,7 +76,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             <div className="lg:col-span-2 space-y-8 lg:space-y-12">
               <div>
                 <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
-                  <h1 className="font-heading text-3xl md:text-4xl text-forest">
+                  <h1 className="type-page-title text-forest">
                     {property.name}
                   </h1>
                   {property.airbnbUrl && (
@@ -122,16 +122,16 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-forest mb-4">
+                <h2 className="type-section-title mb-4 text-forest">
                   About This Property
                 </h2>
-                <p className="text-charcoal/80 leading-relaxed">
+                <p className="text-body">
                   {property.description}
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-forest mb-4">
+                <h2 className="type-section-title mb-4 text-forest">
                   Amenities
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -150,7 +150,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               <VaranasiExplore />
 
               <div>
-                <h2 className="font-heading text-2xl text-forest mb-4">
+                <h2 className="type-section-title mb-4 text-forest">
                   Location
                 </h2>
                 <div className="aspect-video bg-accent rounded-sm overflow-hidden">
@@ -169,7 +169,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl text-forest mb-4">
+                <h2 className="type-section-title mb-4 text-forest">
                   House Rules
                 </h2>
                 <ul className="space-y-2">
@@ -187,7 +187,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
               {property.reviews.length > 0 && (
                 <div>
-                  <h2 className="font-heading text-2xl text-forest mb-4">
+                  <h2 className="type-section-title mb-4 text-forest">
                     Guest Reviews
                   </h2>
                   <div className="space-y-6">

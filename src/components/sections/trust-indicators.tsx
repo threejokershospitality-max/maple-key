@@ -27,10 +27,8 @@ export function TrustIndicators() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
-              <p className="font-heading text-3xl md:text-4xl text-saffron mb-2">
-                {stat.value}
-              </p>
-              <p className="text-sm text-ivory/70 tracking-wide">{stat.label}</p>
+              <p className="type-stat mb-2 text-saffron">{stat.value}</p>
+              <p className="text-meta tracking-wide text-ivory/70">{stat.label}</p>
             </motion.div>
           ))}
         </div>

@@ -49,10 +49,10 @@ export function DestinationsShowcase() {
                   {destination.state}, {destination.country}
                 </span>
               </div>
-              <h3 className="font-heading text-2xl lg:text-3xl text-forest group-hover:text-saffron transition-colors mb-3">
+              <h3 className="type-card-title mb-3 text-forest transition-colors can-hover:group-hover:text-saffron">
                 {destination.name}
               </h3>
-              <p className="text-charcoal/70 leading-relaxed mb-6">
+              <p className="text-body mb-6 text-charcoal/70">
                 {destination.description}
               </p>
               <span className="inline-flex items-center gap-1 text-sm text-forest group-hover:text-saffron transition-colors font-medium">

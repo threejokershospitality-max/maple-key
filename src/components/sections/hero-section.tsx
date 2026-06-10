@@ -16,18 +16,21 @@ export function HeroSection() {
         alt={images.heroAlt}
         fill
         priority
-        className="object-cover"
+        className="object-cover object-[center_35%] sm:object-[center_40%]"
         sizes="100vw"
-        quality={85}
+        quality={90}
       />
-      <div className="hero-overlay" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/50 to-charcoal/25"
+        aria-hidden="true"
+      />
 
       <div className="relative z-10 site-container section-padding-sm text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-heading mx-auto mb-6 max-w-5xl text-balance text-3xl leading-tight text-ivory sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+          className="type-display mx-auto mb-6 max-w-5xl text-balance text-ivory"
         >
           {siteConfig.tagline}
         </motion.h1>
@@ -36,7 +39,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mx-auto mb-10 max-w-2xl px-2 text-base leading-relaxed text-ivory/85 sm:text-lg md:text-xl"
+          className="type-lead-inverse mx-auto mb-10 max-w-2xl px-2 text-ivory/85"
         >
           Discover handpicked vacation homes and homestays in Varanasi, managed
           with care by {siteConfig.parentBrand}.

@@ -126,7 +126,7 @@ export function ExperiencesCatalog() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl md:text-3xl text-forest">
+                  <h2 className="type-section-title text-forest">
                     {meta.label}
                   </h2>
                   <p className="mt-1 max-w-2xl text-sm text-charcoal/70">
@@ -155,7 +155,7 @@ export function ExperiencesCatalog() {
                           </div>
                         )}
                         <div>
-                          <h3 className="font-heading text-xl text-forest leading-snug">
+                          <h3 className="type-card-title text-forest">
                             {exp.title}
                           </h3>
                           {exp.duration && (

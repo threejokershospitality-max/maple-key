@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <div className="surface-card p-8 md:p-10 prose prose-lg text-body space-y-6">
           <p>Last updated: June 2026</p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Information We Collect
           </h2>
           <p>
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
             usage data through analytics tools to improve our website.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             How We Use Your Information
           </h2>
           <p>
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
             do not sell your personal information to third parties.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">
+          <h2 className="type-section-title text-forest">
             Cookies & Analytics
           </h2>
           <p>
@@ -46,13 +46,13 @@ export default function PrivacyPage() {
             control cookie preferences through our cookie consent banner.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">Data Security</h2>
+          <h2 className="type-section-title text-forest">Data Security</h2>
           <p>
             We implement appropriate security measures to protect your personal
             information. All data transmission is encrypted via HTTPS.
           </p>
 
-          <h2 className="font-heading text-2xl text-forest">Contact Us</h2>
+          <h2 className="type-section-title text-forest">Contact Us</h2>
           <p>
             For privacy-related inquiries, contact us at {siteConfig.email}.
           </p>

@@ -19,7 +19,7 @@ function GuidePointer({
         {index + 1}
       </span>
       <div className="min-w-0">
-        <h3 className="font-heading text-base text-forest sm:text-lg">{title}</h3>
+        <h3 className="type-subtitle text-forest">{title}</h3>
         <p className="mt-1 text-sm text-body">{description}</p>
       </div>
     </li>
@@ -37,7 +37,7 @@ export function VaranasiExplore() {
           <div>
             <h2
               id="varanasi-tourist-places"
-              className="font-heading text-2xl text-forest"
+              className="type-section-title text-forest"
             >
               Varanasi Tourist Places
             </h2>
@@ -63,7 +63,7 @@ export function VaranasiExplore() {
           <div>
             <h2
               id="varanasi-things-to-do"
-              className="font-heading text-2xl text-forest"
+              className="type-section-title text-forest"
             >
               Things to Do in Varanasi
             </h2>

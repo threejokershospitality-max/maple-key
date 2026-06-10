@@ -30,13 +30,10 @@ export function FinalCTA({
           transition={{ duration: 0.6 }}
         >
           {subtitle && <p className="eyebrow mb-3">{subtitle}</p>}
-          <h2
-            id="final-cta"
-            className="font-heading text-3xl md:text-5xl text-ivory mb-4"
-          >
+          <h2 id="final-cta" className="type-page-title mb-4 text-ivory">
             {title}
           </h2>
-          <p className="text-ivory/70 max-w-xl mx-auto mb-0 xl:mb-10 leading-relaxed">
+          <p className="type-lead-inverse mx-auto mb-0 max-w-xl text-ivory/70 xl:mb-10">
             {description}
           </p>
 
