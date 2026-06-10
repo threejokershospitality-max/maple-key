@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col safe-area-top">
         <Header />
-        <main className="flex-1 mobile-bar-offset xl:pb-0">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
         <MobileContactBar />

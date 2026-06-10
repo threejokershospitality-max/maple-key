@@ -111,10 +111,18 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.2 }}
-                  className="xl:hidden fixed inset-x-0 top-20 mobile-menu-bottom z-[91] overflow-y-auto overscroll-contain bg-ivory px-6 py-6 sm:px-8"
+                  className="xl:hidden fixed inset-x-0 top-0 mobile-menu-bottom z-[91] overflow-y-auto overscroll-contain bg-ivory px-6 pb-6 pt-24 sm:px-8"
                   aria-label="Mobile navigation"
                 >
                   <div className="flex flex-col gap-6">
+                    <div className="pb-4 border-b border-beige">
+                      <span className="font-heading text-xl text-forest tracking-wide sm:text-2xl">
+                        Maple & Key
+                      </span>
+                      <span className="block text-[9px] text-saffron tracking-[0.18em] uppercase sm:text-[10px] sm:tracking-[0.2em]">
+                        by {siteConfig.parentBrand}
+                      </span>
+                    </div>
                     {navLinks.map((link, i) => (
                       <motion.div
                         key={link.href}
