@@ -15,10 +15,10 @@ export async function sendContactEmails(data: ContactFormData) {
   const resend = getResendClient();
   const inquiryId = generateInquiryId();
   const fromEmail =
-    process.env.RESEND_FROM_EMAIL || "threejokershospitality@gmail.com";
+    process.env.RESEND_FROM_EMAIL || "contact@mapleandkey.co.in";
   const notificationEmail =
     process.env.RESEND_NOTIFICATION_EMAIL ||
-    "threejokershospitality@gmail.com";
+    "contact@mapleandkey.co.in";
 
   const internalHtml = `
     <div style="font-family: 'Georgia', serif; max-width: 600px; margin: 0 auto; padding: 40px; background: #F7F2E8;">

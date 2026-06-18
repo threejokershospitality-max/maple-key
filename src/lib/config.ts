@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
   ],
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "919450855434",
   email:
-    process.env.NEXT_PUBLIC_EMAIL || "threejokershospitality@gmail.com",
+    process.env.NEXT_PUBLIC_EMAIL || "contact@mapleandkey.co.in",
   address: {
     street: "Three Jokers Hospitality",
     streetLine2: "94, Kundan Nagar Colony, Shivpur",
