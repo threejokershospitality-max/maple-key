@@ -32,7 +32,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | `NEXT_PUBLIC_SITE_URL` | Production site URL |
 | `NEXT_PUBLIC_PHONE` | Contact phone number |
 | `NEXT_PUBLIC_WHATSAPP` | WhatsApp number (no +) |
-| `NEXT_PUBLIC_EMAIL` | Contact email |
 | `RESEND_API_KEY` | Resend API key for contact form |
 | `RESEND_FROM_EMAIL` | Sender email address |
 | `RESEND_NOTIFICATION_EMAIL` | Internal notification email |
