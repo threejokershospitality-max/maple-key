@@ -135,5 +135,5 @@ export const images = {
   },
 
   og: "/og-image.jpg",
-  logo: "/logo.svg",
+  logo: "/images/company-logo.jpg",
 } as const;

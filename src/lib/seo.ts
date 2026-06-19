@@ -50,6 +50,10 @@ export function createMetadata({
     robots: noIndex
       ? { index: false, follow: false }
       : { index: true, follow: true },
+    icons: {
+      icon: [{ url: "/images/company-logo.jpg", type: "image/jpeg" }],
+      apple: [{ url: "/images/company-logo.jpg", type: "image/jpeg" }],
+    },
   };
 }
 
@@ -60,7 +64,7 @@ export function organizationSchema() {
     name: siteConfig.name,
     alternateName: "Maple and Key",
     url: siteUrl,
-    logo: `${siteUrl}/logo.svg`,
+    logo: `${siteUrl}/images/company-logo.jpg`,
     description: siteConfig.description,
     parentOrganization: {
       "@type": "Organization",

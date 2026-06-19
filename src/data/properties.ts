@@ -51,7 +51,7 @@ export const properties: Property[] = [
     checkIn: "1:00 PM",
     checkOut: "10:00 AM",
     averageRating: 5,
-    reviewCount: 7,
+    reviewCount: 11,
     reviews: [
       {
         id: "r1a",
@@ -129,7 +129,7 @@ export const properties: Property[] = [
     gallery: [...gd.gallery],
     guests: 25,
     bedrooms: 7,
-    bathrooms: 2,
+    bathrooms: 7,
     extraBeds: "11 extra mattress",
     highlights: [
       "Heritage Property",
