@@ -13,6 +13,7 @@
     --mobile-contact-bar-height: calc(
       4.5rem + env(safe-area-inset-bottom, 0px)
     );
+    --header-height: 5rem;
   }
 
   * {

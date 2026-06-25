@@ -56,7 +56,7 @@ export const images = {
         "/images/properties/the-haven-retreat/5.jpg",
       ],
     },
-    gardenveilCottage: {
+    gardenveilSuite: {
       featured: "/images/properties/the-gardenveil-cottage/1.jpg",
       gallery: [
         "/images/properties/the-gardenveil-cottage/1.jpg",

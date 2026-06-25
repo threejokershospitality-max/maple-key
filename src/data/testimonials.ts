@@ -2,7 +2,7 @@ import { Testimonial } from "@/types";
 
 const PROPERTY_ROTATION = [
   "the-wayne-manor",
-  "the-gardenveil-cottage",
+  "the-gardenveil-suite",
   "the-haven-retreat",
   "the-pearl-manor",
   "the-regal-serenity",
@@ -16,8 +16,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "Had a wonderful stay at this Airbnb! The host was incredibly welcoming and made sure I had everything I needed to feel at home. The location was perfect for exploring Varanasi.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-06-02",
   },
   {
@@ -26,8 +26,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "I stayed for 3 days and had a pleasant experience. The place is a bit away from the city centre, but that also makes it peaceful and calm. It's a good stay for anyone who prefers a quiet location away from the busy areas.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-05-26",
   },
   {
@@ -36,8 +36,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "The place is very beautiful—a beautiful, well-maintained garden and a nice cottage with all amenities. It feels like a house at a good price range; everything is available inside the cottage.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-05-19",
   },
   {
@@ -46,8 +46,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "Nice quiet place if you want a peaceful stay experience away from the crowds in Varanasi. You can definitely opt for this stay. Also if you are looking for a workation, this is one of the better options.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-04-01",
   },
   {
@@ -56,8 +56,8 @@ const allTestimonials: Testimonial[] = [
     rating: 4,
     review:
       "The host is very accommodating and responsive. The place is just like the photos and very spacious. It is a little far from the main attractions of the city however not very inconvenient.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-02-01",
   },
   {
@@ -66,8 +66,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "It was a very wonderful experience—the staff members are friendly, the rooms are clean with a fresh aroma, and they have a very respectful behaviour. I like this place and the family-friendly vibe it gives.",
-    propertySlug: "the-gardenveil-cottage",
-    propertyName: "The Gardenveil Cottage",
+    propertySlug: "the-gardenveil-suite",
+    propertyName: "The Gardenveil Suite",
     date: "2026-01-01",
   },
   {

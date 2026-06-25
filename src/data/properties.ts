@@ -4,7 +4,7 @@ import { images } from "@/lib/images";
 const wm = images.properties.wayneManor;
 const gd = images.properties.goldenDior;
 const hr = images.properties.havenRetreat;
-const gc = images.properties.gardenveilCottage;
+const gc = images.properties.gardenveilSuite;
 const pm = images.properties.pearlManor;
 const rs = images.properties.regalSerenity;
 const vl = images.properties.velvetLotus;
@@ -256,9 +256,9 @@ export const properties: Property[] = [
   },
   {
     id: "4",
-    slug: "the-gardenveil-cottage",
+    slug: "the-gardenveil-suite",
     airbnbUrl: "https://www.airbnb.co.in/h/thegardenveil",
-    name: "The Gardenveil Cottage",
+    name: "The Gardenveil Suite",
     city: "Varanasi",
     state: "Uttar Pradesh",
     country: "India",

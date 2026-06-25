@@ -10,7 +10,7 @@ import { images } from "@/lib/images";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[75vh] items-center justify-center overflow-hidden sm:min-h-[85vh]">
+    <section className="relative min-h-[100svh] overflow-x-hidden sm:min-h-[85svh]">
       <Image
         src={images.hero}
         alt={images.heroAlt}
@@ -25,13 +25,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex w-full items-center justify-center px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-4 pb-[calc(var(--mobile-contact-bar-height)+1rem)] pt-[calc(var(--header-height)+1rem)] sm:min-h-[85svh] sm:px-6 sm:pb-12 sm:pt-[calc(var(--header-height)+1.5rem)] lg:px-8 xl:pb-16">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="type-display mb-6 w-full max-w-5xl text-center text-ivory md:text-balance"
+          className="type-display mb-6 w-full max-w-5xl text-balance text-center text-ivory"
         >
           {siteConfig.tagline}
         </motion.h1>
