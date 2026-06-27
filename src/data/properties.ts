@@ -7,7 +7,7 @@ const hr = images.properties.havenRetreat;
 const gc = images.properties.gardenveilSuite;
 const pm = images.properties.pearlManor;
 const rs = images.properties.regalSerenity;
-const vl = images.properties.velvetLotus;
+const vl = images.properties.velvetLotusResidence;
 
 export const properties: Property[] = [
   {
@@ -554,9 +554,9 @@ export const properties: Property[] = [
   },
   {
     id: "7",
-    slug: "the-velvet-lotus",
+    slug: "the-velvet-lotus-residence",
     airbnbUrl: "https://www.airbnb.co.in/h/thevelvetlotus",
-    name: "The Velvet Lotus",
+    name: "The Velvet Lotus Residence",
     city: "Varanasi",
     state: "Uttar Pradesh",
     country: "India",
@@ -647,7 +647,7 @@ export const properties: Property[] = [
       {
         question: "Is there a space for meditation?",
         answer:
-          "Yes, The Velvet Lotus includes a dedicated meditation alcove and provides yoga mats for morning practice.",
+          "Yes, The Velvet Lotus Residence includes a dedicated meditation alcove and provides yoga mats for morning practice.",
       },
     ],
   },

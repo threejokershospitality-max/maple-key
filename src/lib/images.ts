@@ -86,7 +86,7 @@ export const images = {
         "/images/properties/the-regal-serenity/5.jpg",
       ],
     },
-    velvetLotus: {
+    velvetLotusResidence: {
       featured: "/images/properties/the-velvet-lotus/1.jpg",
       gallery: [
         "/images/properties/the-velvet-lotus/1.jpg",

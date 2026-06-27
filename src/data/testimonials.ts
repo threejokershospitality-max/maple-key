@@ -6,7 +6,7 @@ const PROPERTY_ROTATION = [
   "the-haven-retreat",
   "the-pearl-manor",
   "the-regal-serenity",
-  "the-velvet-lotus",
+  "the-velvet-lotus-residence",
 ] as const;
 
 const allTestimonials: Testimonial[] = [
@@ -314,8 +314,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "House was good and well furnished; room, hall, and bathroom were also clean. There was a little issue with search location—needs to be clearer about location—and the kitchen could be improved.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-05-01",
   },
   {
@@ -324,8 +324,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "Had a wonderful one-day stay at this Airbnb in Varanasi! From the moment I arrived, everything felt thoughtfully arranged and welcoming. The space was clean and comfortable.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-04-15",
   },
   {
@@ -334,8 +334,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "This place is absolutely wonderful. Prime location, peaceful environment, responsive host, sincere caretaker, parking space and beautiful interiors make it a perfect place for a stay.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-04-01",
   },
   {
@@ -344,8 +344,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "The place was spotless and exactly as shown in the photos. The atmosphere was calm, peaceful, and free from unnecessary disturbances. The staff were friendly and helpful.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-03-15",
   },
   {
@@ -354,8 +354,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "It was a great, peaceful and comfortable stay. Big rooms, clean washroom, easy to check-in and caretaker Mr Deepak was helpful with our luggage transfer to the first floor.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-03-10",
   },
   {
@@ -364,8 +364,8 @@ const allTestimonials: Testimonial[] = [
     rating: 5,
     review:
       "We had a great stay at this property. The place is good, clean, and very spacious, which made our stay comfortable. A special thanks to the caretaker, Deepak Pandey.",
-    propertySlug: "the-velvet-lotus",
-    propertyName: "The Velvet Lotus",
+    propertySlug: "the-velvet-lotus-residence",
+    propertyName: "The Velvet Lotus Residence",
     date: "2026-03-01",
   },
 ];

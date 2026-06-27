@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/properties/the-gardenveil-suite",
         permanent: true,
       },
+      {
+        source: "/properties/the-velvet-lotus",
+        destination: "/properties/the-velvet-lotus-residence",
+        permanent: true,
+      },
     ];
   },
   images: {
